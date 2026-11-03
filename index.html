@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Anchor — recovery companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="Anchor home">
+        <span class="brand-mark">✦</span>
+        <span>anchor</span>
+      </a>
+      <div class="profile-card">
+        <div class="avatar">AR</div>
+        <div><strong>Alex Rivera</strong><small>Recovery journey · Day 42</small></div>
+        <button class="icon-button" aria-label="Profile menu">•••</button>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <p class="nav-label">Your space</p>
+        <a class="nav-link active" href="#overview"><span>◈</span> Overview</a>
+        <a class="nav-link" href="#signals"><span>⌁</span> My signals</a>
+        <a class="nav-link" href="#plan"><span>✓</span> My plan</a>
+        <a class="nav-link" href="#journal"><span>▤</span> Check-in journal</a>
+        <p class="nav-label">Support</p>
+        <a class="nav-link" href="#circle"><span>◉</span> My circle</a>
+        <a class="nav-link" href="#settings"><span>⚙</span> Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="privacy-note"><span>⌁</span><div><strong>Your data, your choice</strong><small>Signals are private and encrypted.</small></div></div>
+        <button class="help-link" id="helpButton">Need a little help? <span>↗</span></button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Monday, October 26</span><span class="dot"></span><span class="status-dot"></span> Simulated wearable feed</div>
+        <div class="top-actions">
+          <button class="notification-button" id="notificationButton" aria-label="Notifications"><span>♧</span><b>2</b></button>
+          <div class="mini-avatar">AR</div>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="welcome-row">
+          <div>
+            <p class="eyebrow">GOOD MORNING, ALEX</p>
+            <h1>Small steps. <em>Steady ground.</em></h1>
+            <p class="subheading">A calm view of what your body and mind may be telling you today.</p>
+          </div>
+          <button class="primary-button" id="checkInButton"><span>＋</span> New check-in</button>
+        </section>
+
+        <section class="insight-banner" aria-label="Today’s insight">
+          <div class="insight-icon">✦</div>
+          <div class="insight-copy"><span class="label">TODAY’S INSIGHT</span><strong>Your pattern looks steadier than yesterday.</strong><p>Sleep and movement are trending in a supportive direction. Keep the rhythm gentle.</p></div>
+          <button class="text-button" id="insightDetails">View details <span>→</span></button>
+        </section>
+
+        <section class="section-heading">
+          <div><h2>At a glance</h2><p>Signals are captured automatically when your wearable is connected.</p></div>
+          <button class="date-button">Last 24 hours <span>⌄</span></button>
+        </section>
+        <section class="mode-simulator panel" id="modeSimulator">
+          <div class="mode-copy"><p class="eyebrow">WEARABLE SIGNAL SIMULATOR</p><h2>Choose a scenario to preview</h2><p>These sample modes demonstrate how a connected wearable could change the support plan.</p></div>
+          <div class="mode-options" role="group" aria-label="Simulation mode">
+            <button class="mode-option selected" data-mode="low"><span class="mode-dot low-dot"></span><strong>Low</strong><small>Steady day</small></button>
+            <button class="mode-option" data-mode="medium"><span class="mode-dot medium-dot"></span><strong>Medium</strong><small>Needs attention</small></button>
+            <button class="mode-option" data-mode="high"><span class="mode-dot high-dot"></span><strong>High</strong><small>Extra support</small></button>
+          </div>
+          <button class="primary-button run-simulation" id="runSimulation"><span>▶</span> Run simulation</button>
+          <div class="mode-preview"><span class="live-dot"></span><span id="modePreviewText">Low mode selected · ready to simulate a steady day</span><span class="preview-note">Sample data only</span></div>
+        </section>
+        <section class="metric-grid" id="signals">
+          <article class="metric-card">
+            <div class="metric-top"><span class="metric-icon purple">☾</span><span class="trend up">↗ 8%</span></div>
+            <p class="metric-name">Sleep quality</p><div class="metric-value" id="metricSleep">78<span>/100</span></div><div class="meter"><i id="sleepMeter" style="width:78%"></i></div><small id="metricSleepNote">7h 24m · consistent</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span class="metric-icon coral">♡</span><span class="trend neutral">Resting</span></div>
+            <p class="metric-name">Heart rate</p><div class="metric-value" id="metricHeart">64<span> bpm</span></div><div class="sparkline coral-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small id="metricHeartNote">Within your personal range</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span class="metric-icon blue">⌁</span><span class="trend up">↗ 1.2k</span></div>
+            <p class="metric-name">Movement</p><div class="metric-value" id="metricSteps">6,842<span> steps</span></div><div class="meter blue-meter"><i id="stepsMeter" style="width:68%"></i></div><small id="metricStepsNote">68% of your daily goal</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span class="metric-icon amber">◒</span><span class="trend down">↘ 4%</span></div>
+            <p class="metric-name">Stress signal</p><div class="metric-value" id="metricStress">Low<span> today</span></div><div class="stress-bars"><i></i><i></i><i></i><i class="muted"></i><i class="muted"></i></div><small id="metricStressNote">Based on your recent pattern</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel risk-panel">
+            <div class="panel-heading"><div><p class="eyebrow">YOUR SUPPORTIVE SIGNAL</p><h2>Relapse risk outlook</h2></div><span class="info-icon" title="This is a supportive estimate, not a diagnosis.">i</span></div>
+            <div class="risk-body">
+              <div class="risk-score"><div class="score-ring"><strong id="riskScore">18</strong><span>/ 100</span></div><div><span class="risk-badge" id="riskLabel">LOWER RISK</span><p>Compared with your recent baseline</p></div></div>
+              <div class="chart-wrap"><div class="chart-labels"><span>100</span><span>50</span><span>0</span></div><svg class="risk-chart" viewBox="0 0 500 150" role="img" aria-label="Risk trend over seven days"><path class="grid-line" d="M0 20H500M0 75H500M0 130H500"/><path class="chart-area" d="M0 101 C30 92 50 109 74 96 S115 87 140 96 S180 91 208 105 S245 77 275 82 S315 88 340 72 S382 78 405 62 S450 68 500 42 V150 H0Z"/><path class="chart-line" d="M0 101 C30 92 50 109 74 96 S115 87 140 96 S180 91 208 105 S245 77 275 82 S315 88 340 72 S382 78 405 62 S450 68 500 42"/></svg><div class="chart-days"><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span><span>Today</span></div></div>
+            </div>
+            <div class="signal-footer"><span class="pulse"></span><span>Last updated 8 minutes ago</span><button class="text-button" id="riskExplain">How this works <span>→</span></button></div>
+          </article>
+          <article class="panel action-panel" id="plan">
+            <div class="panel-heading"><div><p class="eyebrow">JUST FOR THIS MOMENT</p><h2>A gentle next step</h2></div><span class="sparkle">✦</span></div>
+            <div class="activity-card"><div class="activity-art">◒</div><div><strong id="planActivityTitle">Take a 10-minute walk</strong><p id="planActivityCopy">A short walk or a quiet stretch can help your nervous system settle.</p><button class="outline-button" id="activityButton">Start activity <span>→</span></button></div></div>
+            <div class="alternatives"><span>Or choose what feels right:</span><button data-activity="Take a short walk">Take a short walk</button><button data-activity="Listen to music">Listen to music</button><button data-activity="Do some light stretching">Light stretching</button></div>
+          </article>
+        </section>
+
+        <section class="simulation-result panel" id="simulationResult" hidden>
+          <div class="panel-heading">
+            <div><p class="eyebrow">SIMULATION RESULT</p><h2 id="resultTitle">Your readings, translated</h2></div>
+            <span class="result-time" id="resultTime">Just now</span>
+          </div>
+          <div class="result-summary">
+            <div class="result-summary-icon" id="resultIcon">✓</div>
+            <div><strong id="resultSummary">Your current pattern looks steady.</strong><p id="resultDescription">Here is how the sample model interpreted the readings you entered.</p></div>
+          </div>
+          <div class="result-columns">
+            <div class="result-block"><span class="result-block-label">SIGNALS READ</span><div class="result-signal"><span>Steadiness</span><strong id="resultMood">7 / 10</strong><i><b id="moodBar"></b></i></div><div class="result-signal"><span>Sleep</span><strong id="resultSleep">7.4h</strong><i><b id="sleepBar"></b></i></div><div class="result-signal"><span>Heart rate</span><strong id="resultHeart">64 bpm</strong><i><b id="heartBar"></b></i></div></div>
+            <div class="result-block"><span class="result-block-label">WHAT CHANGED THE SCORE</span><ul class="driver-list" id="driverList"></ul></div>
+            <div class="result-block recommendation-block"><span class="result-block-label">SUGGESTED NEXT STEP</span><strong id="resultActivity">Keep your gentle reset.</strong><p id="resultActivityCopy">A short walk, breathing exercise, or message to someone in your circle can help protect this steadier pattern.</p><button class="outline-button" id="resultAction">Add to my plan <span>→</span></button></div>
+          </div>
+          <div class="notification-state" id="notificationState"><span>◉</span><div><strong id="notificationTitle">No support notification needed</strong><small id="notificationCopy">Your settings are respected. We will only notify your circle when you choose to enable it and the pattern needs extra support.</small></div></div>
+        </section>
+
+        <section class="section-heading lower-heading" id="circle"><div><h2>Your support circle</h2><p>People you trust can be part of your plan, on your terms.</p></div><button class="text-button" id="manageCircle">Manage circle <span>→</span></button></section>
+        <section class="circle-grid">
+          <article class="circle-card"><div class="circle-avatar green">JM</div><div><strong>Jamie Morgan</strong><small>Primary support · WhatsApp</small></div><span class="connected">● Connected</span><button class="more-button">•••</button></article>
+          <article class="circle-card"><div class="circle-avatar orange">SK</div><div><strong>Samira Khan</strong><small>Trusted friend · Email</small></div><span class="connected">● Connected</span><button class="more-button">•••</button></article>
+          <button class="add-circle" id="addCircle"><span>＋</span><strong>Add someone you trust</strong><small>Invite by WhatsApp or email</small></button>
+        </section>
+        <div class="disclaimer"><span>ⓘ</span><p><strong>A note about Anchor:</strong> This experience is for reflection and support, not medical diagnosis or emergency care. Your readings are entered manually today and represent the signals a wearable could provide in a future connected version. If you may be in immediate danger, contact local emergency services.</p></div>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="checkinModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="checkinTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <p class="eyebrow">MANUAL CHECK-IN</p><h2 id="checkinTitle">How are you feeling right now?</h2><p class="modal-copy">These are sample fields for now. In a connected version, compatible wearable devices would fill the signal readings automatically.</p>
+      <form id="checkinForm"><label>How steady do you feel? <output id="moodOutput">7 / 10</output><input id="moodRange" type="range" min="1" max="10" value="7"></label><label>Resting heart rate <span class="input-suffix">bpm</span><input id="heartRateInput" type="number" min="35" max="180" value="64"></label><label>Sleep last night <span class="input-suffix">hours</span><input id="sleepInput" type="number" min="0" max="16" step="0.1" value="7.4"></label><label class="toggle-row"><span>Send me a gentle reminder later</span><input type="checkbox" checked><i></i></label><button class="primary-button full" type="submit">Save check-in <span>→</span></button></form>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

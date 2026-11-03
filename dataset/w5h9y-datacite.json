@@ -1,0 +1,196 @@
+{
+  "alternateIdentifiers": [
+    {
+      "alternateIdentifier": "https://osf.io/w5h9y",
+      "alternateIdentifierType": "URL"
+    }
+  ],
+  "contributors": [
+    {
+      "contributorName": {
+        "contributorName": "Center for Open Science",
+        "nameType": "Organizational"
+      },
+      "contributorType": "HostingInstitution",
+      "nameIdentifier": {
+        "nameIdentifier": "https://ror.org/05d5mza29",
+        "nameIdentifierScheme": "ROR"
+      }
+    }
+  ],
+  "creators": [
+    {
+      "creatorName": {
+        "creatorName": "Kendra Wyant",
+        "nameType": "Personal"
+      },
+      "nameIdentifier": {
+        "nameIdentifier": "https://t.co/kU9uJUvVTg?amp=1",
+        "nameIdentifierScheme": "URL"
+      }
+    },
+    {
+      "creatorName": {
+        "creatorName": "Sarah June Kittleson Sant'Ana",
+        "nameType": "Personal"
+      },
+      "nameIdentifier": {
+        "nameIdentifier": "https://osf.io/keau4",
+        "nameIdentifierScheme": "URL"
+      }
+    },
+    {
+      "creatorName": {
+        "creatorName": "Gaylen Fronk",
+        "nameType": "Personal"
+      },
+      "nameIdentifier": {
+        "nameIdentifier": "https://osf.io/6tr9z",
+        "nameIdentifierScheme": "URL"
+      }
+    },
+    {
+      "creatorName": {
+        "creatorName": "John J. Curtin",
+        "nameType": "Personal"
+      },
+      "nameIdentifier": {
+        "nameIdentifier": "https://osf.io/ypzk2",
+        "nameIdentifierScheme": "URL"
+      }
+    }
+  ],
+  "dates": [
+    {
+      "date": "2023-09-06",
+      "dateType": "Created"
+    },
+    {
+      "date": "2023-10-05",
+      "dateType": "Updated"
+    }
+  ],
+  "descriptions": [],
+  "fundingReferences": [],
+  "identifier": {
+    "identifier": "https://osf.io/w5h9y",
+    "identifierType": "URL"
+  },
+  "publicationYear": "2023",
+  "publisher": "OSF",
+  "relatedIdentifiers": [
+    {
+      "relatedIdentifier": "https://osf.io/4vzaf",
+      "relatedIdentifierType": "URL",
+      "relationType": "HasPart"
+    },
+    {
+      "relatedIdentifier": "https://osf.io/5xams",
+      "relatedIdentifierType": "URL",
+      "relationType": "HasPart"
+    },
+    {
+      "relatedIdentifier": "https://osf.io/ps6ux",
+      "relatedIdentifierType": "URL",
+      "relationType": "HasPart"
+    },
+    {
+      "relatedIdentifier": "https://osf.io/xdnej",
+      "relatedIdentifierType": "URL",
+      "relationType": "HasPart"
+    },
+    {
+      "relatedIdentifier": "10.31234/osf.io/cgsf7",
+      "relatedIdentifierType": "DOI",
+      "relationType": "IsSupplementTo"
+    }
+  ],
+  "relatedItems": [
+    {
+      "publicationYear": "2023",
+      "publisher": "OSF",
+      "relatedItemIdentifier": {
+        "relatedItemIdentifier": "https://osf.io/4vzaf",
+        "relatedItemIdentifierType": "URL"
+      },
+      "relatedItemType": "Text",
+      "relationType": "HasPart",
+      "titles": [
+        {
+          "title": "Data"
+        }
+      ]
+    },
+    {
+      "publicationYear": "2023",
+      "publisher": "OSF",
+      "relatedItemIdentifier": {
+        "relatedItemIdentifier": "https://osf.io/5xams",
+        "relatedItemIdentifierType": "URL"
+      },
+      "relatedItemType": "Text",
+      "relationType": "HasPart",
+      "titles": [
+        {
+          "title": "Methods"
+        }
+      ]
+    },
+    {
+      "publicationYear": "2023",
+      "publisher": "OSF",
+      "relatedItemIdentifier": {
+        "relatedItemIdentifier": "https://osf.io/ps6ux",
+        "relatedItemIdentifierType": "URL"
+      },
+      "relatedItemType": "Text",
+      "relationType": "HasPart",
+      "titles": [
+        {
+          "title": "Scripts"
+        }
+      ]
+    },
+    {
+      "publicationYear": "2024",
+      "publisher": "OSF",
+      "relatedItemIdentifier": {
+        "relatedItemIdentifier": "https://osf.io/xdnej",
+        "relatedItemIdentifierType": "URL"
+      },
+      "relatedItemType": "Text",
+      "relationType": "HasPart",
+      "titles": [
+        {
+          "title": "Supplement"
+        }
+      ]
+    },
+    {
+      "publicationYear": "2023",
+      "publisher": "PsyArXiv",
+      "relatedItemIdentifier": {
+        "relatedItemIdentifier": "10.31234/osf.io/cgsf7",
+        "relatedItemIdentifierType": "DOI"
+      },
+      "relatedItemType": "Preprint",
+      "relationType": "IsSupplementTo",
+      "titles": [
+        {
+          "title": "Machine learning models for temporally precise lapse prediction in alcohol use disorder"
+        }
+      ]
+    }
+  ],
+  "resourceType": {
+    "resourceType": "Project",
+    "resourceTypeGeneral": "Text"
+  },
+  "rightsList": [],
+  "subjects": [],
+  "titles": [
+    {
+      "title": "Machine learning models for temporally precise lapse prediction in alcohol use disorder"
+    }
+  ]
+}

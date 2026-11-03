@@ -1,0 +1,10 @@
+.venv
+.env
+.venv/
+__pycache__/
+*.pyc
+.~lock.*
+*.zip
+*.z01
+healthcare_csv_archive.zip
+healthcare_source_csvs_bzip2.zip
