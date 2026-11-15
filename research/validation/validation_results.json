@@ -1,0 +1,58 @@
+{
+  "HGB_Full_G": {
+    "features": 270,
+    "AUROC": 0.8852119457843094,
+    "AUPRC": 0.46289962824596576,
+    "within_person_AUROC": 0.5573656078057988,
+    "Brier_score": 0.052849358771950704,
+    "Recall_at_top10pct": 0.5467088243748204,
+    "Precision_at_top10pct": 0.42070338420703385,
+    "Optimal_operating_threshold": 0.07,
+    "Sensitivity_at_optimal": 0.8082782408738143,
+    "Specificity_at_optimal": 0.8080619263306732,
+    "Balanced_accuracy": 0.8081700836022437,
+    "training_time_seconds": 16.17043161392212
+  },
+  "HGB_Compact_K": {
+    "features": 22,
+    "AUROC": 0.8749411725635594,
+    "AUPRC": 0.44843106570207025,
+    "within_person_AUROC": 0.5398512658760577,
+    "Brier_score": 0.054278042898233445,
+    "Recall_at_top10pct": 0.5139407875826387,
+    "Precision_at_top10pct": 0.39548772395487725,
+    "Optimal_operating_threshold": 0.08,
+    "Sensitivity_at_optimal": 0.7881575165277378,
+    "Specificity_at_optimal": 0.8098832889975316,
+    "Balanced_accuracy": 0.7990204027626346,
+    "training_time_seconds": 2.7120912075042725
+  },
+  "Logit_Calibrated_K": {
+    "features": 22,
+    "AUROC": 0.8712580940487165,
+    "AUPRC": 0.4748471451164158,
+    "within_person_AUROC": 0.5812104728039627,
+    "Brier_score": 0.05364811374418656,
+    "Recall_at_top10pct": 0.5395228513940787,
+    "Precision_at_top10pct": 0.41517363415173636,
+    "Optimal_operating_threshold": 0.06,
+    "Sensitivity_at_optimal": 0.7861454440931303,
+    "Specificity_at_optimal": 0.8032688666810458,
+    "Balanced_accuracy": 0.794707155387088,
+    "training_time_seconds": 1.030935287475586
+  },
+  "RandomForest_Compact_K": {
+    "features": 22,
+    "AUROC": 0.8842905251867329,
+    "AUPRC": 0.46235258472292634,
+    "within_person_AUROC": 0.49997157087176636,
+    "Brier_score": 0.05332042582982313,
+    "Recall_at_top10pct": 0.5369359011210117,
+    "Precision_at_top10pct": 0.4131829241318292,
+    "Optimal_operating_threshold": 0.11,
+    "Sensitivity_at_optimal": 0.8028169014084507,
+    "Specificity_at_optimal": 0.8253169410693316,
+    "Balanced_accuracy": 0.8140669212388911,
+    "training_time_seconds": 2.4278271198272705
+  }
+}

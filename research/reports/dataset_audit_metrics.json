@@ -1,0 +1,37 @@
+{
+  "feature_0lag": {
+    "rows": 274179,
+    "columns": 286,
+    "participants": 151,
+    "positive_windows": 21107,
+    "negative_windows": 253072,
+    "prevalence": 0.07698255519204607,
+    "lapsing_participants": 84,
+    "zero_lapse_participants": 67,
+    "min_date": "2017-03-03 06:00:00+00:00",
+    "max_date": "2019-12-04 04:00:00+00:00",
+    "pct_1h_spacing": 0.9961938196096749,
+    "max_gap_hours": 261.0,
+    "missing_cells": 2908812,
+    "pct_missing_cells": 0.03709500482776335,
+    "cols_with_missing": 252,
+    "duplicate_timestamps": 0,
+    "constant_columns": [],
+    "participant_rows_min": 472,
+    "participant_rows_median": 2010.0,
+    "participant_rows_mean": 1815.7549668874171,
+    "participant_rows_max": 2136,
+    "participant_pos_median": 165.0,
+    "participant_pos_mean": 251.27380952380952,
+    "participant_pos_max": 1193,
+    "heaviest_participant_share": 0.056521533140664236
+  },
+  "raw_ema": {
+    "rows": 45460,
+    "columns": 19,
+    "participants": 169,
+    "drinking_reports": 1437,
+    "participants_reporting_drinking": 104,
+    "drinking_rate": 0.03161020677518698
+  }
+}

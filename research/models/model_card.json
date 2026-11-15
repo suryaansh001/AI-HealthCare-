@@ -1,0 +1,28 @@
+{
+  "model_details": {
+    "name": "Anchor Compact Lapse Predictor v1",
+    "version": "1.0.0",
+    "architecture": "Calibrated L2-Regularized Logistic Regression with Fold-Safe Preprocessing",
+    "framework": "scikit-learn 1.7+",
+    "serialized_path": "anchor_lapse_model_v1.joblib"
+  },
+  "intended_use": {
+    "application": "Supportive JITAI risk alerting for individuals in alcohol recovery",
+    "intended_horizon": "24-hour lead time ahead of a rolling 7-day outcome window",
+    "non_intended_use": "Medical diagnosis, emergency care dispatch, or standalone clinical decision"
+  },
+  "metrics_5fold_grouped_cv": {
+    "AUROC": 0.871,
+    "AUPRC": 0.475,
+    "within_person_AUROC": 0.581,
+    "Brier_score": 0.0536,
+    "Recall_at_top10pct": 0.5395,
+    "Precision_at_top10pct": 0.4152,
+    "optimal_threshold": 0.08
+  },
+  "ethical_and_safety_considerations": {
+    "stigma_prevention": "Never outputs 'relapse detected'; uses supportive tier labels ('Steady', 'Watchful', 'Higher Support')",
+    "cold_start_warning": "Returns 'calibrating' status if fewer than 72 hours of check-ins exist",
+    "privacy": "All signals are encrypted; zero clinical identifiers stored in model weights"
+  }
+}

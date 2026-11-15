@@ -1,0 +1,30 @@
+{
+  "model_name": "Anchor Compact v1",
+  "version": "1.0.0",
+  "prediction_horizon": "24_hours_ahead_of_next_7_days",
+  "feature_count": 22,
+  "features": [
+    "label_day",
+    "demo_age",
+    "demo_sex",
+    "demo_educ",
+    "demo_income",
+    "demo_marital",
+    "demo_race",
+    "demo_employ",
+    "p12.l24.rratecount.count.lapse",
+    "p12.l24.dratecount.count.lapse",
+    "p24.l24.rratecount.count.lapse",
+    "p24.l24.dratecount.count.lapse",
+    "p48.l24.rratecount.count.lapse",
+    "p48.l24.dratecount.count.lapse",
+    "p72.l24.rratecount.count.lapse",
+    "p72.l24.dratecount.count.lapse",
+    "p168.l24.rratecount.count.lapse",
+    "p168.l24.dratecount.count.lapse",
+    "ema_2.p0.l24.rrecent_response",
+    "ema_6.p0.l24.rrecent_response",
+    "ema_7.p0.l24.rrecent_response",
+    "ema_10.p0.l24.rrecent_response"
+  ]
+}

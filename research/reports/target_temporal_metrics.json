@@ -1,0 +1,25 @@
+{
+  "target_overlap": {
+    "total_positive_windows": 21107,
+    "distinct_positive_runs": 391,
+    "mean_run_length_hours": 53.98209718670077,
+    "autocorr_1h": 0.9690280227359351,
+    "autocorr_6h": 0.8143405589817976,
+    "autocorr_24h": 0.2595373270308871,
+    "autocorr_168h": 0.025161887354412094
+  },
+  "continuation_vs_onset": {
+    "prob_y_given_p12_drank": 1.0,
+    "prob_y_given_p12_clean": 0.06389589636983717,
+    "prob_y_given_p24_drank": 0.9998536299765808,
+    "prob_y_given_p24_clean": 0.05339876639722907,
+    "prob_y_given_p168_drank": 0.3185455982610414,
+    "prob_y_given_p168_clean": 0.022305813735049692
+  },
+  "quiet168_subset": {
+    "rows": 223574,
+    "positive_windows": 4987,
+    "prevalence": 0.022305813735049692,
+    "participants": 149
+  }
+}
