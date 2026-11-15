@@ -1,0 +1,29 @@
+ ANCHOR_MASTER_AUDIT_AND_EVALUATION.md              | 477 [32m+++++++++++++++++++++[m
+ research/audit/ANCHOR_STAGE_2_MASTER_AUDIT.md      | 354 [32m+++++++++++++++[m
+ research/experiments/train_and_validate.py         | 179 [32m++++++++[m
+ .../figure1_participant_lapse_clustering.png       | Bin [31m0[m -> [32m167283[m bytes
+ .../figures/figure2_lag_horizon_degradation.png    | Bin [31m0[m -> [32m186690[m bytes
+ .../figures/figure3_feature_family_ablation.png    | Bin [31m0[m -> [32m115267[m bytes
+ .../figure4_continuation_vs_clean_onset.png        | Bin [31m0[m -> [32m96120[m bytes
+ .../figure5_within_person_auc_distribution.png     | Bin [31m0[m -> [32m71664[m bytes
+ research/figures/generate_eda_figures.py           | 194 [32m+++++++++[m
+ research/models/anchor_lapse_model_v1.joblib       | Bin [31m0[m -> [32m7594[m bytes
+ research/models/feature_schema.json                |  30 [32m++[m
+ research/models/model_card.json                    |  28 [32m++[m
+ research/models/serialize_model.py                 | 147 [32m+++++++[m
+ research/preprocessing/dataset_audit.py            | 130 [32m++++++[m
+ research/preprocessing/pipeline.py                 | 116 [32m+++++[m
+ research/preprocessing/target_temporal_analysis.py | 107 [32m+++++[m
+ .../reports/ANCHOR_FINAL_ML_DEVELOPMENT_REPORT.md  | 168 [32m++++++++[m
+ research/reports/BACKEND_INTEGRATION_GUIDE.md      | 143 [32m++++++[m
+ research/reports/DATASET_AUDIT_REPORT.md           |  86 [32m++++[m
+ research/reports/EDA_REPORT.md                     |  51 [32m+++[m
+ research/reports/FEATURE_ENGINEERING_REPORT.md     |  70 [32m+++[m
+ research/reports/PREPROCESSING_REPORT.md           |  47 [32m++[m
+ research/reports/PROJECT_STATUS.md                 |  61 [32m+++[m
+ .../reports/TARGET_VALIDITY_AND_TEMPORAL_DESIGN.md |  66 [32m+++[m
+ .../reports/VALIDATION_AND_ROBUSTNESS_REPORT.md    |  51 [32m+++[m
+ research/reports/dataset_audit_metrics.json        |  37 [32m++[m
+ research/reports/target_temporal_metrics.json      |  25 [32m++[m
+ research/validation/validation_results.json        |  58 [32m+++[m
+ 28 files changed, 2625 insertions(+)
