@@ -1,0 +1,19 @@
+{
+  "name": "ANCHOR research model v2",
+  "version": "2.0.0",
+  "status": "research_only",
+  "target_status": "NOT_VERIFIED",
+  "intended_use": "Exploratory probability estimation against the supplied, unverified lapse labels.",
+  "not_intended_for": [
+    "clinical decisions",
+    "autonomous interventions",
+    "diagnosis",
+    "claims of prospective or personalized forecasting"
+  ],
+  "selected_candidate": "random_forest__compact_22",
+  "calibration": "uncalibrated",
+  "decision_threshold": null,
+  "required_history": "Feature timing is not verified; p168-named fields exceed a 72-hour warm-up.",
+  "frontend_integration": "Not implemented; partner-owned frontend/backend files were not changed.",
+  "model_artifact": "anchor_lapse_model_v2.joblib"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ANCHOR research model v2",
+  "version": "2.0.0",
+  "status": "research_only",
+  "selected_model": "100-tree RandomForestClassifier with fitted preprocessing pipeline",
+  "target_status": "NOT_VERIFIED",
+  "evaluation": "Grouped held-out participant performance against stored labels; not a prospective evaluation.",
+  "locked_test_metrics": {
+    "rows": 6068,
+    "participants": 20,
+    "positives": 485,
+    "auroc": 0.8430862467246852,
+    "auprc": 0.35221282565463224,
+    "brier": 0.06099386849013367,
+    "log_loss": 0.21416555528675077,
+    "within_participant_auroc": 0.48553215723839194,
+    "within_participant_auc_eligible": 12
+  },
+  "calibration": "uncalibrated",
+  "decision_threshold": null,
+  "intended_use": "Technical research inference only against supplied unverified labels.",
+  "not_intended_for": [
+    "clinical decisions",
+    "automated risk alerts or interventions",
+    "diagnosis",
+    "prospective or personalized forecasting claims"
+  ],
+  "known_limitations": [
+    "Exact target prediction origin, outcome window, endpoint convention, and complete follow-up are not verified.",
+    "Prediction-time availability and precise semantics of all input features are not verified.",
+    "Within-participant discrimination was near chance on the fixed v2 locked test.",
+    "The model is not calibrated and no decision threshold is approved."
+  ],
+  "model_artifact_reference": "MODEL_ARTIFACT_REFERENCE.json",
+  "feature_schema": "feature_schema.json",
+  "backend_contract": "BACKEND_CONTRACT.md"
+}

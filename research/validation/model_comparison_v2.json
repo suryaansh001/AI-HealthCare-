@@ -1,0 +1,1013 @@
+{
+  "model_version": "2.0.0",
+  "experiment_id": "anchor-v2-grouped-evaluation-seed-42",
+  "target_status": "NOT_VERIFIED",
+  "target_column": "lapse",
+  "target_note": "All metrics are conditional on supplied labels; they do not establish future-event semantics.",
+  "data": {
+    "source": "dataset\\completedatasetwithALLcsv\\features_24lag_v3.csv",
+    "rows_after_stride": 45206,
+    "participants": 151,
+    "positive_rows": 3479,
+    "positive_rate": 0.07695881077733044,
+    "stride": 6,
+    "missing_compact_feature_cells": 86,
+    "duplicate_participant_timestamps": 0
+  },
+  "partition_counts": {
+    "development": {
+      "rows": 18836,
+      "participants": 64,
+      "positives": 1681
+    },
+    "calibration_fit": {
+      "rows": 6479,
+      "participants": 22,
+      "positives": 435
+    },
+    "calibration_selection": {
+      "rows": 6709,
+      "participants": 22,
+      "positives": 434
+    },
+    "threshold_selection": {
+      "rows": 7114,
+      "participants": 23,
+      "positives": 444
+    },
+    "locked_test": {
+      "rows": 6068,
+      "participants": 20,
+      "positives": 485
+    }
+  },
+  "candidate_selection": {
+    "method": "mean rank across development-only grouped OOF AUROC, AUPRC, Brier, and log loss; smaller feature count breaks ties",
+    "selected": "random_forest__compact_22",
+    "selected_model": "random_forest",
+    "selected_feature_set": "compact_22",
+    "selected_parameters": {
+      "max_depth": 8
+    },
+    "candidates": [
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8855913755517762,
+        "auprc": 0.5108613312197153,
+        "brier": 0.05940144429263652,
+        "log_loss": 0.20565618099088084,
+        "name": "random_forest__compact_22",
+        "model_name": "random_forest",
+        "feature_set": "compact_22",
+        "feature_count": 22,
+        "elapsed_seconds": 1.7660000000032596,
+        "rank_auroc": 2.0,
+        "rank_auprc": 2.0,
+        "rank_brier": 1.0,
+        "rank_log_loss": 1.0,
+        "mean_metric_rank": 1.5,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.557083218141245,
+          "median_auroc": 0.5603448275862069,
+          "participant_auroc_25th": 0.4158730158730159,
+          "participant_auroc_75th": 0.670303605313093
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8865152402830268,
+        "auprc": 0.5085483291330615,
+        "brier": 0.05978151182598637,
+        "log_loss": 0.20646701997052058,
+        "name": "random_forest__compact_22__max_depth_12",
+        "model_name": "random_forest",
+        "feature_set": "compact_22",
+        "feature_count": 22,
+        "elapsed_seconds": 5.735000000044238,
+        "rank_auroc": 1.0,
+        "rank_auprc": 3.0,
+        "rank_brier": 3.0,
+        "rank_log_loss": 3.0,
+        "mean_metric_rank": 2.5,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5653154893034023,
+          "median_auroc": 0.5667613636363635,
+          "participant_auroc_25th": 0.44253731343283587,
+          "participant_auroc_75th": 0.658955223880597
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8840132597926557,
+        "auprc": 0.5046194573084972,
+        "brier": 0.05965741595258632,
+        "log_loss": 0.2061172470953801,
+        "name": "random_forest__compact_22__max_depth_5",
+        "model_name": "random_forest",
+        "feature_set": "compact_22",
+        "feature_count": 22,
+        "elapsed_seconds": 5.438000000023749,
+        "rank_auroc": 3.0,
+        "rank_auprc": 4.0,
+        "rank_brier": 2.0,
+        "rank_log_loss": 2.0,
+        "mean_metric_rank": 2.75,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5466753733936793,
+          "median_auroc": 0.5399014778325123,
+          "participant_auroc_25th": 0.4411843515541265,
+          "participant_auroc_75th": 0.6581422692533804
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8788843228907584,
+        "auprc": 0.5125328735531107,
+        "brier": 0.06025715468531169,
+        "log_loss": 0.21437644685660603,
+        "name": "logistic__historical_lapse_only",
+        "model_name": "logistic",
+        "feature_set": "historical_lapse_only",
+        "feature_count": 10,
+        "elapsed_seconds": 0.3130000000237487,
+        "rank_auroc": 5.0,
+        "rank_auprc": 1.0,
+        "rank_brier": 4.0,
+        "rank_log_loss": 7.0,
+        "mean_metric_rank": 4.25,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.4566592153357958,
+          "median_auroc": 0.4781140042223786,
+          "participant_auroc_25th": 0.28422619047619047,
+          "participant_auroc_75th": 0.5756641366223909
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8651645744585489,
+        "auprc": 0.4596684056657138,
+        "brier": 0.06171936657895037,
+        "log_loss": 0.21187834336201863,
+        "name": "random_forest__historical_lapse_only",
+        "model_name": "random_forest",
+        "feature_set": "historical_lapse_only",
+        "feature_count": 10,
+        "elapsed_seconds": 1.5,
+        "rank_auroc": 7.0,
+        "rank_auprc": 7.0,
+        "rank_brier": 5.0,
+        "rank_log_loss": 4.0,
+        "mean_metric_rank": 5.75,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5413191412217556,
+          "median_auroc": 0.5388888888888889,
+          "participant_auroc_25th": 0.4036144578313253,
+          "participant_auroc_75th": 0.6318482422554821
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8789631610585571,
+        "auprc": 0.4266070692645049,
+        "brier": 0.0628709888533395,
+        "log_loss": 0.21399918844217247,
+        "name": "random_forest__full_available",
+        "model_name": "random_forest",
+        "feature_set": "full_available",
+        "feature_count": 280,
+        "elapsed_seconds": 12.186999999976251,
+        "rank_auroc": 4.0,
+        "rank_auprc": 11.0,
+        "rank_brier": 8.0,
+        "rank_log_loss": 6.0,
+        "mean_metric_rank": 7.25,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5883515732211783,
+          "median_auroc": 0.6127136752136753,
+          "participant_auroc_25th": 0.48411716171617164,
+          "participant_auroc_75th": 0.6953149730927509
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8788725847250227,
+        "auprc": 0.4229338907392898,
+        "brier": 0.06297580875974179,
+        "log_loss": 0.21395879602873558,
+        "name": "random_forest__historical_plus_ema",
+        "model_name": "random_forest",
+        "feature_set": "historical_plus_ema",
+        "feature_count": 262,
+        "elapsed_seconds": 6.313000000023749,
+        "rank_auroc": 6.0,
+        "rank_auprc": 12.0,
+        "rank_brier": 9.0,
+        "rank_log_loss": 5.0,
+        "mean_metric_rank": 8.0,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5853369049251487,
+          "median_auroc": 0.6044337606837608,
+          "participant_auroc_25th": 0.43824404761904767,
+          "participant_auroc_75th": 0.7253493013972055
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.854308782419314,
+        "auprc": 0.47808578433315874,
+        "brier": 0.06191360032626355,
+        "log_loss": 0.2203432919982791,
+        "name": "logistic__compact_22__C_0.03",
+        "model_name": "logistic",
+        "feature_set": "compact_22",
+        "feature_count": 22,
+        "elapsed_seconds": 2.077999999979511,
+        "rank_auroc": 12.0,
+        "rank_auprc": 5.0,
+        "rank_brier": 6.0,
+        "rank_log_loss": 10.0,
+        "mean_metric_rank": 8.25,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5858745632728319,
+          "median_auroc": 0.6233974358974359,
+          "participant_auroc_25th": 0.4976415094339623,
+          "participant_auroc_75th": 0.6719269102990033
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.861916743635166,
+        "auprc": 0.4506949553681683,
+        "brier": 0.062995826340678,
+        "log_loss": 0.22022557036087145,
+        "name": "hist_gradient_boosting__compact_22__max_leaf_nodes_8",
+        "model_name": "hist_gradient_boosting",
+        "feature_set": "compact_22",
+        "feature_count": 22,
+        "elapsed_seconds": 3.7339999999967404,
+        "rank_auroc": 9.0,
+        "rank_auprc": 9.0,
+        "rank_brier": 10.0,
+        "rank_log_loss": 9.0,
+        "mean_metric_rank": 9.25,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5832274911272429,
+          "median_auroc": 0.5819088319088319,
+          "participant_auroc_25th": 0.46030348759222,
+          "participant_auroc_75th": 0.6742424242424243
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8646986542375038,
+        "auprc": 0.44471021023972407,
+        "brier": 0.06416520249741961,
+        "log_loss": 0.2179446747350336,
+        "name": "hist_gradient_boosting__historical_lapse_only",
+        "model_name": "hist_gradient_boosting",
+        "feature_set": "historical_lapse_only",
+        "feature_count": 10,
+        "elapsed_seconds": 1.625,
+        "rank_auroc": 8.0,
+        "rank_auprc": 10.0,
+        "rank_brier": 12.0,
+        "rank_log_loss": 8.0,
+        "mean_metric_rank": 9.5,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5120978901486213,
+          "median_auroc": 0.508457095709571,
+          "participant_auroc_25th": 0.3774928774928774,
+          "participant_auroc_75th": 0.6242255482074486
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8437765441626379,
+        "auprc": 0.4658380485147955,
+        "brier": 0.06277761621644748,
+        "log_loss": 0.22464611048552605,
+        "name": "logistic__compact_22",
+        "model_name": "logistic",
+        "feature_set": "compact_22",
+        "feature_count": 22,
+        "elapsed_seconds": 0.625,
+        "rank_auroc": 14.0,
+        "rank_auprc": 6.0,
+        "rank_brier": 7.0,
+        "rank_log_loss": 11.0,
+        "mean_metric_rank": 9.5,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.587106298033572,
+          "median_auroc": 0.6200520833333333,
+          "participant_auroc_25th": 0.5014880952380952,
+          "participant_auroc_75th": 0.6740033222591362
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8366150840457868,
+        "auprc": 0.4550864479621044,
+        "brier": 0.06339817478268192,
+        "log_loss": 0.22762381851515798,
+        "name": "logistic__compact_22__C_0.3",
+        "model_name": "logistic",
+        "feature_set": "compact_22",
+        "feature_count": 22,
+        "elapsed_seconds": 2.3589999999967404,
+        "rank_auroc": 18.0,
+        "rank_auprc": 8.0,
+        "rank_brier": 11.0,
+        "rank_log_loss": 12.0,
+        "mean_metric_rank": 12.25,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5883507072894638,
+          "median_auroc": 0.61640625,
+          "participant_auroc_25th": 0.5025793650793651,
+          "participant_auroc_75th": 0.6772486772486773
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8606516225109931,
+        "auprc": 0.38107498091349307,
+        "brier": 0.06728693728540891,
+        "log_loss": 0.23055495054640102,
+        "name": "hist_gradient_boosting__historical_plus_ema",
+        "model_name": "hist_gradient_boosting",
+        "feature_set": "historical_plus_ema",
+        "feature_count": 262,
+        "elapsed_seconds": 10.51500000001397,
+        "rank_auroc": 10.0,
+        "rank_auprc": 15.0,
+        "rank_brier": 15.0,
+        "rank_log_loss": 13.0,
+        "mean_metric_rank": 13.25,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.6111416863745021,
+          "median_auroc": 0.6147783251231527,
+          "participant_auroc_25th": 0.5248118771608705,
+          "participant_auroc_75th": 0.7106770833333335
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8561871143375366,
+        "auprc": 0.38813275260961094,
+        "brier": 0.06678826427014162,
+        "log_loss": 0.23193034739246401,
+        "name": "hist_gradient_boosting__full_available",
+        "model_name": "hist_gradient_boosting",
+        "feature_set": "full_available",
+        "feature_count": 280,
+        "elapsed_seconds": 28.344000000040978,
+        "rank_auroc": 11.0,
+        "rank_auprc": 14.0,
+        "rank_brier": 14.0,
+        "rank_log_loss": 14.0,
+        "mean_metric_rank": 13.25,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.6162486543747546,
+          "median_auroc": 0.631325110689437,
+          "participant_auroc_25th": 0.5466968477531858,
+          "participant_auroc_75th": 0.7124950099800399
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8470851290964162,
+        "auprc": 0.40394681432801316,
+        "brier": 0.06622896961386207,
+        "log_loss": 0.23212805087487676,
+        "name": "hist_gradient_boosting__compact_22",
+        "model_name": "hist_gradient_boosting",
+        "feature_set": "compact_22",
+        "feature_count": 22,
+        "elapsed_seconds": 5.89000000001397,
+        "rank_auroc": 13.0,
+        "rank_auprc": 13.0,
+        "rank_brier": 13.0,
+        "rank_log_loss": 15.0,
+        "mean_metric_rank": 13.5,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5808880477750427,
+          "median_auroc": 0.5734186746987951,
+          "participant_auroc_25th": 0.45952380952380956,
+          "participant_auroc_75th": 0.6887025948103792
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8382902607381242,
+        "auprc": 0.3664174422240021,
+        "brier": 0.0698182636310327,
+        "log_loss": 0.2421281979445237,
+        "name": "hist_gradient_boosting__compact_22__max_leaf_nodes_16",
+        "model_name": "hist_gradient_boosting",
+        "feature_set": "compact_22",
+        "feature_count": 22,
+        "elapsed_seconds": 2.702999999979511,
+        "rank_auroc": 15.0,
+        "rank_auprc": 16.0,
+        "rank_brier": 16.0,
+        "rank_log_loss": 17.0,
+        "mean_metric_rank": 16.0,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.574474934829448,
+          "median_auroc": 0.5725546058879392,
+          "participant_auroc_25th": 0.45041322314049587,
+          "participant_auroc_75th": 0.6703393213572855
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8378551683733242,
+        "auprc": 0.2889398201043996,
+        "brier": 0.07021620309027318,
+        "log_loss": 0.23928387076731067,
+        "name": "random_forest__ema_only",
+        "model_name": "random_forest",
+        "feature_set": "ema_only",
+        "feature_count": 252,
+        "elapsed_seconds": 5.60899999999674,
+        "rank_auroc": 16.0,
+        "rank_auprc": 18.0,
+        "rank_brier": 17.0,
+        "rank_log_loss": 16.0,
+        "mean_metric_rank": 16.75,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.6637289305893936,
+          "median_auroc": 0.6819517930629041,
+          "participant_auroc_25th": 0.5575539568345322,
+          "participant_auroc_75th": 0.797542735042735
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8374907650804654,
+        "auprc": 0.36522615533063596,
+        "brier": 0.07147725991522655,
+        "log_loss": 0.2510894070920943,
+        "name": "logistic__historical_plus_ema",
+        "model_name": "logistic",
+        "feature_set": "historical_plus_ema",
+        "feature_count": 262,
+        "elapsed_seconds": 3.2969999999622814,
+        "rank_auroc": 17.0,
+        "rank_auprc": 17.0,
+        "rank_brier": 18.0,
+        "rank_log_loss": 18.0,
+        "mean_metric_rank": 17.5,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.6371751807631771,
+          "median_auroc": 0.6525583014270797,
+          "participant_auroc_25th": 0.5675848303393214,
+          "participant_auroc_75th": 0.7371262458471761
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8011171023340917,
+        "auprc": 0.2452118736412766,
+        "brier": 0.07955666659327501,
+        "log_loss": 0.27692846714367175,
+        "name": "hist_gradient_boosting__ema_only",
+        "model_name": "hist_gradient_boosting",
+        "feature_set": "ema_only",
+        "feature_count": 252,
+        "elapsed_seconds": 10.26600000000326,
+        "rank_auroc": 19.0,
+        "rank_auprc": 20.0,
+        "rank_brier": 19.0,
+        "rank_log_loss": 19.0,
+        "mean_metric_rank": 19.25,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.6505124183713878,
+          "median_auroc": 0.6540270429159318,
+          "participant_auroc_25th": 0.5582264957264957,
+          "participant_auroc_75th": 0.7176638176638176
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.7938263490091306,
+        "auprc": 0.2806432340900309,
+        "brier": 0.08014445880914105,
+        "log_loss": 0.29009622697038306,
+        "name": "logistic__full_available",
+        "model_name": "logistic",
+        "feature_set": "full_available",
+        "feature_count": 280,
+        "elapsed_seconds": 4.60999999998603,
+        "rank_auroc": 20.0,
+        "rank_auprc": 19.0,
+        "rank_brier": 20.0,
+        "rank_log_loss": 20.0,
+        "mean_metric_rank": 19.75,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.6499736310463401,
+          "median_auroc": 0.673076923076923,
+          "participant_auroc_25th": 0.572615219721329,
+          "participant_auroc_75th": 0.7474056603773584
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.7600268989517316,
+        "auprc": 0.20066225407061095,
+        "brier": 0.09200341277617355,
+        "log_loss": 0.32012898655479627,
+        "name": "logistic__ema_only",
+        "model_name": "logistic",
+        "feature_set": "ema_only",
+        "feature_count": 252,
+        "elapsed_seconds": 3.155999999959022,
+        "rank_auroc": 21.0,
+        "rank_auprc": 21.0,
+        "rank_brier": 24.0,
+        "rank_log_loss": 21.0,
+        "mean_metric_rank": 21.75,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.6269638588095592,
+          "median_auroc": 0.6441176470588235,
+          "participant_auroc_25th": 0.5241379310344827,
+          "participant_auroc_75th": 0.7421874999999999
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.5235112338754101,
+        "auprc": 0.11405812674595264,
+        "brier": 0.08870995144933315,
+        "log_loss": 0.34203873004118496,
+        "name": "random_forest__demographic_only",
+        "model_name": "random_forest",
+        "feature_set": "demographic_only",
+        "feature_count": 7,
+        "elapsed_seconds": 1.375,
+        "rank_auroc": 22.0,
+        "rank_auprc": 22.0,
+        "rank_brier": 22.0,
+        "rank_log_loss": 22.0,
+        "mean_metric_rank": 22.0,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5,
+          "median_auroc": 0.5,
+          "participant_auroc_25th": 0.5,
+          "participant_auroc_75th": 0.5
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.369138507061365,
+        "auprc": 0.0725702709186017,
+        "brier": 0.08815715804307259,
+        "log_loss": 0.3624302942280149,
+        "name": "logistic__demographic_only",
+        "model_name": "logistic",
+        "feature_set": "demographic_only",
+        "feature_count": 7,
+        "elapsed_seconds": 0.48399999999674037,
+        "rank_auroc": 24.0,
+        "rank_auprc": 24.0,
+        "rank_brier": 21.0,
+        "rank_log_loss": 23.0,
+        "mean_metric_rank": 23.0,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5,
+          "median_auroc": 0.5,
+          "participant_auroc_25th": 0.5,
+          "participant_auroc_75th": 0.5
+        }
+      },
+      {
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.4191627549561674,
+        "auprc": 0.0873141702676083,
+        "brier": 0.09006918646646667,
+        "log_loss": 0.452619353135485,
+        "name": "hist_gradient_boosting__demographic_only",
+        "model_name": "hist_gradient_boosting",
+        "feature_set": "demographic_only",
+        "feature_count": 7,
+        "elapsed_seconds": 1.9690000000409782,
+        "rank_auroc": 23.0,
+        "rank_auprc": 23.0,
+        "rank_brier": 23.0,
+        "rank_log_loss": 24.0,
+        "mean_metric_rank": 23.25,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5,
+          "median_auroc": 0.5,
+          "participant_auroc_25th": 0.5,
+          "participant_auroc_75th": 0.5
+        }
+      }
+    ]
+  },
+  "calibration": {
+    "fit_status": {
+      "uncalibrated": "available",
+      "sigmoid": "fit on participant-disjoint calibration-fit partition",
+      "isotonic": "fit; calibration-fit partition met minimum 100 observations per class and 20 participants"
+    },
+    "selection_partition_metrics": {
+      "uncalibrated": {
+        "n": 6709,
+        "positives": 434,
+        "prevalence": 0.0646892234312118,
+        "auroc": 0.9158826445370591,
+        "auprc": 0.4984603089378095,
+        "brier": 0.04181346190555441,
+        "log_loss": 0.14739353782622364,
+        "mean_calibration_selection_rank": 1.0
+      },
+      "sigmoid": {
+        "n": 6709,
+        "positives": 434,
+        "prevalence": 0.0646892234312118,
+        "auroc": 0.9158826445370591,
+        "auprc": 0.4984603089378095,
+        "brier": 0.04248651394588695,
+        "log_loss": 0.15541144807969484,
+        "mean_calibration_selection_rank": 2.0
+      },
+      "isotonic": {
+        "n": 6709,
+        "positives": 434,
+        "prevalence": 0.0646892234312118,
+        "auroc": 0.9144937301485303,
+        "auprc": 0.45142525206692363,
+        "brier": 0.043378427914211815,
+        "log_loss": 0.1786965143026886,
+        "mean_calibration_selection_rank": 3.0
+      }
+    },
+    "selected_method": "uncalibrated",
+    "independent_locked_test_metrics": {
+      "uncalibrated": {
+        "n": 6068,
+        "positives": 485,
+        "prevalence": 0.07992748846407383,
+        "auroc": 0.8430862467246852,
+        "auprc": 0.35221282565463224,
+        "brier": 0.06099386849013367,
+        "log_loss": 0.21416555528675077
+      },
+      "sigmoid": {
+        "n": 6068,
+        "positives": 485,
+        "prevalence": 0.07992748846407383,
+        "auroc": 0.8430862467246852,
+        "auprc": 0.35221282565463224,
+        "brier": 0.06348722073542275,
+        "log_loss": 0.22421382340214016
+      },
+      "isotonic": {
+        "n": 6068,
+        "positives": 485,
+        "prevalence": 0.07992748846407383,
+        "auroc": 0.8402377615404644,
+        "auprc": 0.31940297331535294,
+        "brier": 0.06134924169213538,
+        "log_loss": 0.2628463854706054
+      }
+    }
+  },
+  "threshold_analysis": {
+    "threshold": 0.08858388210071665,
+    "youden_j": 0.6362913138025581,
+    "policy": "exploratory_youden_j",
+    "status": "operating point only; not a clinically justified decision rule",
+    "selection_partition": "threshold_selection",
+    "decision_use_approved": false,
+    "reason": "Target meaning and alert consequences are not verified; inference returns probability only.",
+    "locked_test_metrics": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.8430862467246852,
+      "auprc": 0.35221282565463224,
+      "brier": 0.06099386849013367,
+      "log_loss": 0.21416555528675077,
+      "threshold": 0.08858388210071665,
+      "precision": 0.24352331606217617,
+      "recall": 0.7752577319587629,
+      "f1": 0.3706259241005421,
+      "sensitivity": 0.7752577319587629,
+      "specificity": 0.7907934802077736,
+      "balanced_accuracy": 0.7830256060832683,
+      "alert_rate": 0.2544495715227423,
+      "false_alerts_per_100_rows": 19.24851680949242,
+      "confusion_matrix": {
+        "tn": 4415,
+        "fp": 1168,
+        "fn": 109,
+        "tp": 376
+      },
+      "participant_auc_summary": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.48553215723839194,
+        "median_auroc": 0.5191501693163527,
+        "participant_auroc_25th": 0.40797973671350296,
+        "participant_auroc_75th": 0.5998250394277346
+      },
+      "participant_bootstrap_95pct": {
+        "auroc": [
+          0.7460244793361598,
+          0.8978153071531578
+        ],
+        "auprc": [
+          0.12234532743444959,
+          0.5432048143513117
+        ],
+        "brier": [
+          0.02950758206384067,
+          0.0992662707670118
+        ],
+        "log_loss": [
+          0.12246610277558097,
+          0.3265680961361828
+        ],
+        "within_person_auroc": [
+          0.3733131447146733,
+          0.5940055393059264
+        ]
+      }
+    }
+  },
+  "participant_reporting": {
+    "test_participant_auc": {
+      "eligible_participants": 12,
+      "total_participants": 20,
+      "macro_auroc": 0.48553215723839194,
+      "median_auroc": 0.5191501693163527,
+      "participant_auroc_25th": 0.40797973671350296,
+      "participant_auroc_75th": 0.5998250394277346
+    },
+    "bootstrap_unit": "participant",
+    "subgroup_metrics": "deferred: demographic field meanings/codebook are unavailable",
+    "eligible_participant_metrics": [
+      {
+        "participant_token": "c00e461c87b9",
+        "n": 331,
+        "positives": 8,
+        "auroc": 0.20356037151702788,
+        "auprc": 0.016539606709895096
+      },
+      {
+        "participant_token": "6146d42c1bcc",
+        "n": 228,
+        "positives": 108,
+        "auroc": 0.7825617283950617,
+        "auprc": 0.7630754056669873
+      },
+      {
+        "participant_token": "c047b72eeb6f",
+        "n": 216,
+        "positives": 107,
+        "auroc": 0.46025893852353594,
+        "auprc": 0.48186703162091093
+      },
+      {
+        "participant_token": "e80a92449eb8",
+        "n": 312,
+        "positives": 20,
+        "auroc": 0.6964897260273972,
+        "auprc": 0.1391637255439604
+      },
+      {
+        "participant_token": "c93050b1b9ff",
+        "n": 289,
+        "positives": 20,
+        "auroc": 0.5756505576208178,
+        "auprc": 0.08890775433577917
+      },
+      {
+        "participant_token": "634a394b0629",
+        "n": 258,
+        "positives": 79,
+        "auroc": 0.5510218513542182,
+        "auprc": 0.34607325196905914
+      },
+      {
+        "participant_token": "5071da51081d",
+        "n": 282,
+        "positives": 4,
+        "auroc": 0.08318345323741008,
+        "auprc": 0.010579113078088336
+      },
+      {
+        "participant_token": "fab603bcb135",
+        "n": 298,
+        "positives": 39,
+        "auroc": 0.48727848727848727,
+        "auprc": 0.16817420295907223
+      },
+      {
+        "participant_token": "1464791efa80",
+        "n": 254,
+        "positives": 56,
+        "auroc": 0.6723484848484849,
+        "auprc": 0.3908979149616743
+      },
+      {
+        "participant_token": "739cde08aace",
+        "n": 254,
+        "positives": 12,
+        "auroc": 0.43870523415977963,
+        "auprc": 0.06979413774257569
+      },
+      {
+        "participant_token": "2129e0568b50",
+        "n": 301,
+        "positives": 28,
+        "auroc": 0.31580324437467294,
+        "auprc": 0.0728384858951354
+      },
+      {
+        "participant_token": "3c64628ac3f3",
+        "n": 340,
+        "positives": 4,
+        "auroc": 0.5595238095238095,
+        "auprc": 0.021398982856205395
+      }
+    ]
+  },
+  "chronological_validation": {
+    "status": "PENDING_TARGET_VERIFICATION",
+    "utility_implemented": "make_purged_chronological_split",
+    "guard": "requires explicit verified prediction, outcome-start, outcome-end, and follow-up columns"
+  },
+  "features": {
+    "comparison_sets": {
+      "compact_22": 22,
+      "historical_lapse_only": 10,
+      "ema_only": 252,
+      "demographic_only": 7,
+      "historical_plus_ema": 262,
+      "full_available": 280
+    },
+    "selected_schema": {
+      "model_version": "2.0.0",
+      "feature_count": 22,
+      "features": [
+        "label_day",
+        "demo_age",
+        "demo_sex",
+        "demo_educ",
+        "demo_income",
+        "demo_marital",
+        "demo_race",
+        "demo_employ",
+        "p12.l24.rratecount.count.lapse",
+        "p12.l24.dratecount.count.lapse",
+        "p24.l24.rratecount.count.lapse",
+        "p24.l24.dratecount.count.lapse",
+        "p48.l24.rratecount.count.lapse",
+        "p48.l24.dratecount.count.lapse",
+        "p72.l24.rratecount.count.lapse",
+        "p72.l24.dratecount.count.lapse",
+        "p168.l24.rratecount.count.lapse",
+        "p168.l24.dratecount.count.lapse",
+        "ema_2.p0.l24.rrecent_response",
+        "ema_6.p0.l24.rrecent_response",
+        "ema_7.p0.l24.rrecent_response",
+        "ema_10.p0.l24.rrecent_response"
+      ],
+      "feature_types": {
+        "label_day": "categorical",
+        "demo_age": "numeric",
+        "demo_sex": "categorical",
+        "demo_educ": "categorical",
+        "demo_income": "numeric",
+        "demo_marital": "categorical",
+        "demo_race": "categorical",
+        "demo_employ": "categorical",
+        "p12.l24.rratecount.count.lapse": "numeric",
+        "p12.l24.dratecount.count.lapse": "numeric",
+        "p24.l24.rratecount.count.lapse": "numeric",
+        "p24.l24.dratecount.count.lapse": "numeric",
+        "p48.l24.rratecount.count.lapse": "numeric",
+        "p48.l24.dratecount.count.lapse": "numeric",
+        "p72.l24.rratecount.count.lapse": "numeric",
+        "p72.l24.dratecount.count.lapse": "numeric",
+        "p168.l24.rratecount.count.lapse": "numeric",
+        "p168.l24.dratecount.count.lapse": "numeric",
+        "ema_2.p0.l24.rrecent_response": "numeric",
+        "ema_6.p0.l24.rrecent_response": "numeric",
+        "ema_7.p0.l24.rrecent_response": "numeric",
+        "ema_10.p0.l24.rrecent_response": "numeric"
+      },
+      "feature_semantics_status": "available input names/types; upstream feature timing and meaning not fully verified"
+    },
+    "new_derived_features": [],
+    "reason": "No additional temporal features were created because event definitions and source feature timing are unresolved."
+  },
+  "reproducibility": {
+    "python": "3.10.19",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "joblib": "1.5.3",
+    "git_head": "1daa744959e02b94a3914e7ae7b30415aa8a0053",
+    "seed": 42,
+    "generated_utc": "2026-11-15T13:21:05.590007+00:00"
+  }
+}

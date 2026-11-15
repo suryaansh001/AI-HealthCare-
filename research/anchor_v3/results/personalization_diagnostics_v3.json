@@ -1,0 +1,97 @@
+{
+  "participant_level_rows": 20,
+  "eligible_within_person_auc": 12,
+  "participant_mean_risk_vs_prevalence": {
+    "participant_mean_probability_variance_share": 0.6266212443043827,
+    "spearman_participant_mean_probability_vs_prevalence": 0.9065380019946498,
+    "auroc_of_participant_mean_centered_scores": 0.5225698041366372,
+    "participant_mean_probability_range": [
+      0.008388586319972842,
+      0.262883620115145
+    ],
+    "participant_prevalence_range": [
+      0.0,
+      0.49537037037037035
+    ],
+    "interpretation": "Descriptive decomposition only. It cannot distinguish true personal risk from label/follow-up differences or establish forecasting."
+  },
+  "errors": {
+    "false_alert_definition": "predicted positive at a threshold selected outside locked test",
+    "missed_positive_definition": "stored-label positive below that threshold"
+  },
+  "history_strata": {
+    "('0-5 prior rows', 'v2_random_forest')": {
+      "rows": 120,
+      "participants": 20,
+      "prevalence": 0.15,
+      "auroc": 0.6802832244008715,
+      "auprc": 0.38367431391012186,
+      "brier": 0.13656881380145477
+    },
+    "('0-5 prior rows', 'personalized_ema_hybrid_rf')": {
+      "rows": 120,
+      "participants": 20,
+      "prevalence": 0.15,
+      "auroc": 0.8491285403050108,
+      "auprc": 0.5182053148685936,
+      "brier": 0.11982736522507188
+    },
+    "('0-5 prior rows', 'full_personalized_rf')": {
+      "rows": 120,
+      "participants": 20,
+      "prevalence": 0.15,
+      "auroc": 0.8115468409586056,
+      "auprc": 0.44616182548889505,
+      "brier": 0.12031311552491163
+    },
+    "('6-23 prior rows', 'v2_random_forest')": {
+      "rows": 360,
+      "participants": 20,
+      "prevalence": 0.08333333333333333,
+      "auroc": 0.8241414141414143,
+      "auprc": 0.30492774730183386,
+      "brier": 0.06693056759717099
+    },
+    "('6-23 prior rows', 'personalized_ema_hybrid_rf')": {
+      "rows": 360,
+      "participants": 20,
+      "prevalence": 0.08333333333333333,
+      "auroc": 0.8419191919191918,
+      "auprc": 0.2932393796779327,
+      "brier": 0.06641465464193451
+    },
+    "('6-23 prior rows', 'full_personalized_rf')": {
+      "rows": 360,
+      "participants": 20,
+      "prevalence": 0.08333333333333333,
+      "auroc": 0.8274747474747474,
+      "auprc": 0.27315819132524505,
+      "brier": 0.0672228786529193
+    },
+    "('24+ prior rows', 'v2_random_forest')": {
+      "rows": 5588,
+      "participants": 20,
+      "prevalence": 0.07820329277022191,
+      "auroc": 0.8562221816474285,
+      "auprc": 0.3690600713443731,
+      "brier": 0.05898846313653812
+    },
+    "('24+ prior rows', 'personalized_ema_hybrid_rf')": {
+      "rows": 5588,
+      "participants": 20,
+      "prevalence": 0.07820329277022191,
+      "auroc": 0.874940192902047,
+      "auprc": 0.4018897198598679,
+      "brier": 0.05768549143026127
+    },
+    "('24+ prior rows', 'full_personalized_rf')": {
+      "rows": 5588,
+      "participants": 20,
+      "prevalence": 0.07820329277022191,
+      "auroc": 0.8686014179557677,
+      "auprc": 0.41021873017025073,
+      "brier": 0.05787532053192625
+    }
+  },
+  "caution": "Participant-level statistics have small denominators and are descriptive only. Target and feature timing remain unverified."
+}

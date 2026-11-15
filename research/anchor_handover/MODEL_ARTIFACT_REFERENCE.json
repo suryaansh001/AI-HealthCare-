@@ -1,0 +1,12 @@
+{
+  "artifact": "../models/anchor_lapse_model_v2.joblib",
+  "sha256": "86F6417425D2AD3B4CA2B9ABB7ABC335071FC1255F4598A2356B73631A1A9A06",
+  "model_version": "2.0.0",
+  "estimator": "sklearn.ensemble.RandomForestClassifier",
+  "tree_count": 100,
+  "calibration": "uncalibrated",
+  "decision_threshold": null,
+  "decision_use_approved": false,
+  "target_status": "NOT_VERIFIED",
+  "artifact_policy": "Use the preserved artifact at the referenced path; do not retrain or copy it into this directory."
+}

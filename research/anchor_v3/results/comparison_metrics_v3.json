@@ -1,0 +1,1331 @@
+{
+  "version": "3.0.0-experimental",
+  "target_status": "NOT_VERIFIED",
+  "test_set_policy": "Reused the exact fixed v2 locked-test participants and rows. No v3 test rows were substituted.",
+  "data": {
+    "source": "dataset\\completedatasetwithALLcsv\\features_24lag_v3.csv",
+    "source_rows_before_stride": 270911,
+    "rows_after_stride": 45206,
+    "participants": 151,
+    "stride": 6,
+    "locked_test_rows": 6068,
+    "locked_test_participants": 20,
+    "locked_test_positives": 485,
+    "locked_test_prevalence": 0.07992748846407383
+  },
+  "fixed_v2_benchmark": {
+    "stored_metrics": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.8430862467246852,
+      "auprc": 0.35221282565463224,
+      "brier": 0.06099386849013367,
+      "log_loss": 0.21416555528675077,
+      "threshold": 0.08858388210071665,
+      "precision": 0.24352331606217617,
+      "recall": 0.7752577319587629,
+      "f1": 0.3706259241005421,
+      "sensitivity": 0.7752577319587629,
+      "specificity": 0.7907934802077736,
+      "balanced_accuracy": 0.7830256060832683,
+      "alert_rate": 0.2544495715227423,
+      "false_alerts_per_100_rows": 19.24851680949242,
+      "confusion_matrix": {
+        "tn": 4415,
+        "fp": 1168,
+        "fn": 109,
+        "tp": 376
+      },
+      "participant_auc_summary": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.48553215723839194,
+        "median_auroc": 0.5191501693163527,
+        "participant_auroc_25th": 0.40797973671350296,
+        "participant_auroc_75th": 0.5998250394277346
+      },
+      "participant_bootstrap_95pct": {
+        "auroc": [
+          0.7460244793361598,
+          0.8978153071531578
+        ],
+        "auprc": [
+          0.12234532743444959,
+          0.5432048143513117
+        ],
+        "brier": [
+          0.02950758206384067,
+          0.0992662707670118
+        ],
+        "log_loss": [
+          0.12246610277558097,
+          0.3265680961361828
+        ],
+        "within_person_auroc": [
+          0.3733131447146733,
+          0.5940055393059264
+        ]
+      }
+    },
+    "independently_reproduced_metrics": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.8430862467246852,
+      "auprc": 0.35221282565463224,
+      "brier": 0.06099386849013367,
+      "log_loss": 0.21416555528675077
+    },
+    "same_partitions": true,
+    "same_v2_artifact_and_feature_order": true
+  },
+  "development_candidate_selection": {
+    "method": "Mean rank of 5-fold participant-grouped development OOF AUROC, AUPRC, Brier, and log loss; smaller feature count breaks ties.",
+    "selected_experimental_candidate": "pooled_rf_compact",
+    "does_not_include_fixed_v2_artifact_in_dev_ranking": true,
+    "candidates": [
+      {
+        "name": "pooled_rf_compact",
+        "mean_rank": 2.25,
+        "feature_count": 22,
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8850815542441098,
+        "auprc": 0.5118876856411876,
+        "brier": 0.059037153350866685,
+        "log_loss": 0.20501601857237903,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5486649749595076,
+          "median_auroc": 0.5669899425287356,
+          "participant_auroc_25th": 0.4166666666666667,
+          "participant_auroc_75th": 0.6656378600823045
+        }
+      },
+      {
+        "name": "full_personalized_rf",
+        "mean_rank": 2.25,
+        "feature_count": 48,
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8893207832633523,
+        "auprc": 0.4908601120420364,
+        "brier": 0.05999321874076375,
+        "log_loss": 0.20428017730010697,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5396613631760653,
+          "median_auroc": 0.5245601688951442,
+          "participant_auroc_25th": 0.41203703703703703,
+          "participant_auroc_75th": 0.6651234567901234
+        }
+      },
+      {
+        "name": "history_rate_augmented_rf",
+        "mean_rank": 2.5,
+        "feature_count": 24,
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8839039232001465,
+        "auprc": 0.5133443859341442,
+        "brier": 0.05925231136259826,
+        "log_loss": 0.20571420393157835,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5578831643055825,
+          "median_auroc": 0.5569544364508393,
+          "participant_auroc_25th": 0.4558879392212725,
+          "participant_auroc_75th": 0.6502213788741302
+        }
+      },
+      {
+        "name": "logistic_history_only",
+        "mean_rank": 4.0,
+        "feature_count": 10,
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8788843228907584,
+        "auprc": 0.5125328735531107,
+        "brier": 0.06025715468531169,
+        "log_loss": 0.21437644685660603,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.4566592153357958,
+          "median_auroc": 0.4781140042223786,
+          "participant_auroc_25th": 0.28422619047619047,
+          "participant_auroc_75th": 0.5756641366223909
+        }
+      },
+      {
+        "name": "personalized_ema_hybrid_rf",
+        "mean_rank": 4.0,
+        "feature_count": 46,
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8860354319220196,
+        "auprc": 0.48082824290520537,
+        "brier": 0.06099447042896422,
+        "log_loss": 0.20790443035821424,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.5535759456561693,
+          "median_auroc": 0.5483117816091955,
+          "participant_auroc_25th": 0.46232718894009217,
+          "participant_auroc_75th": 0.6705882352941177
+        }
+      },
+      {
+        "name": "logistic_compact",
+        "mean_rank": 6.0,
+        "feature_count": 22,
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.8437765441626379,
+        "auprc": 0.4658380485147955,
+        "brier": 0.06277761621644748,
+        "log_loss": 0.22464611048552605,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.587106298033572,
+          "median_auroc": 0.6200520833333333,
+          "participant_auroc_25th": 0.5014880952380952,
+          "participant_auroc_75th": 0.6740033222591362
+        }
+      },
+      {
+        "name": "random_forest_ema_only",
+        "mean_rank": 7.0,
+        "feature_count": 252,
+        "n": 18836,
+        "positives": 1681,
+        "prevalence": 0.08924400084943725,
+        "auroc": 0.832113038015879,
+        "auprc": 0.2866788635556982,
+        "brier": 0.07063144471465554,
+        "log_loss": 0.24142222344856254,
+        "within_person": {
+          "eligible_participants": 37,
+          "total_participants": 64,
+          "macro_auroc": 0.6536480117377366,
+          "median_auroc": 0.6717764471057884,
+          "participant_auroc_25th": 0.5666254125412542,
+          "participant_auroc_75th": 0.7866379310344828
+        }
+      }
+    ]
+  },
+  "locked_test_results": {
+    "v2_random_forest": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.8430862467246852,
+      "auprc": 0.35221282565463224,
+      "brier": 0.06099386849013367,
+      "log_loss": 0.21416555528675077,
+      "threshold": 0.08858388210071665,
+      "precision": 0.24352331606217617,
+      "recall": 0.7752577319587629,
+      "f1": 0.3706259241005421,
+      "sensitivity": 0.7752577319587629,
+      "specificity": 0.7907934802077736,
+      "balanced_accuracy": 0.7830256060832683,
+      "alert_rate": 0.2544495715227423,
+      "false_alerts_per_100_rows": 19.24851680949242,
+      "confusion_matrix": {
+        "tn": 4415,
+        "fp": 1168,
+        "fn": 109,
+        "tp": 376
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.48553215723839194,
+        "median_auroc": 0.5191501693163527,
+        "participant_auroc_25th": 0.40797973671350296,
+        "participant_auroc_75th": 0.5998250394277346
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.7389530538987511,
+          0.8974897453224163
+        ],
+        "auprc": [
+          0.12407116001860034,
+          0.5395145179243538
+        ],
+        "brier": [
+          0.029231661694486363,
+          0.098745808419098
+        ],
+        "log_loss": [
+          0.12025241393525854,
+          0.32745139365007675
+        ],
+        "within_person_auroc": [
+          0.35856660030108717,
+          0.5972033695977509
+        ]
+      },
+      "threshold_selection_source": "fixed v2 threshold"
+    },
+    "constant_prevalence": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.5,
+      "auprc": 0.07992748846407383,
+      "brier": 0.07362588245492581,
+      "log_loss": 0.2791438847152109,
+      "threshold": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "balanced_accuracy": 0.5,
+      "alert_rate": 0.0,
+      "false_alerts_per_100_rows": 0.0,
+      "confusion_matrix": {
+        "tn": 5583,
+        "fp": 0,
+        "fn": 485,
+        "tp": 0
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.5,
+        "median_auroc": 0.5,
+        "participant_auroc_25th": 0.5,
+        "participant_auroc_75th": 0.5
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.5,
+          0.5
+        ],
+        "auprc": [
+          0.03334209577466677,
+          0.14084717891249268
+        ],
+        "brier": [
+          0.03535542341500837,
+          0.12367213909109237
+        ],
+        "log_loss": [
+          0.1709306377492014,
+          0.42065428372675795
+        ],
+        "within_person_auroc": [
+          0.5,
+          0.5
+        ]
+      },
+      "threshold_selection_source": "fixed 0.5"
+    },
+    "history_presence_prevalence": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.6299589512345098,
+      "auprc": 0.18110350732930566,
+      "brier": 0.06679541577011497,
+      "log_loss": 0.25200453910671455,
+      "threshold": 0.47998220640569395,
+      "precision": 0.4230769230769231,
+      "recall": 0.2948453608247423,
+      "f1": 0.34750911300121506,
+      "sensitivity": 0.2948453608247423,
+      "specificity": 0.9650725416442772,
+      "balanced_accuracy": 0.6299589512345097,
+      "alert_rate": 0.05570204350692155,
+      "false_alerts_per_100_rows": 3.213579433091628,
+      "confusion_matrix": {
+        "tn": 5388,
+        "fp": 195,
+        "fn": 342,
+        "tp": 143
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.5390142634209467,
+        "median_auroc": 0.5220718572991301,
+        "participant_auroc_25th": 0.49191418536267617,
+        "participant_auroc_75th": 0.5812934565606499
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.5686009206216973,
+          0.6593896230358949
+        ],
+        "auprc": [
+          0.07600501545728448,
+          0.26615473967973896
+        ],
+        "brier": [
+          0.0327888715083258,
+          0.10992063456709296
+        ],
+        "log_loss": [
+          0.1514433408747203,
+          0.3793870637401703
+        ],
+        "within_person_auroc": [
+          0.5074301206569933,
+          0.5733970977090947
+        ]
+      },
+      "threshold_selection_source": "separate v2 threshold-selection participants"
+    },
+    "previous_stored_label_diagnostic": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.939194831142404,
+      "auprc": 0.7961847440750671,
+      "brier": 0.018395488765434356,
+      "log_loss": 0.6218867687031971,
+      "threshold": 0.5,
+      "precision": 0.8861283643892339,
+      "recall": 0.8824742268041237,
+      "f1": 0.8842975206611571,
+      "sensitivity": 0.8824742268041237,
+      "specificity": 0.9901486655919757,
+      "balanced_accuracy": 0.9363114461980497,
+      "alert_rate": 0.07959789057350034,
+      "false_alerts_per_100_rows": 0.9063941990771259,
+      "confusion_matrix": {
+        "tn": 5528,
+        "fp": 55,
+        "fn": 57,
+        "tp": 428
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.9043845069761325,
+        "median_auroc": 0.9067688234283451,
+        "participant_auroc_25th": 0.8874299516507347,
+        "participant_auroc_75th": 0.9216979367753586
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.919028298179783,
+          0.9497308125557796
+        ],
+        "auprc": [
+          0.7210455141110191,
+          0.8378975024399256
+        ],
+        "brier": [
+          0.009266923815867165,
+          0.02941859548967873
+        ],
+        "log_loss": [
+          0.3140781003657823,
+          0.9929819470548772
+        ],
+        "within_person_auroc": [
+          0.8908389049594205,
+          0.9177809925804247
+        ]
+      },
+      "threshold_selection_source": "fixed 0.5; diagnostic only",
+      "interpretation": "Autocorrelation diagnostic only; target-label availability and window overlap are unverified."
+    },
+    "pooled_rf_compact": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.8436374413490142,
+      "auprc": 0.3537756639694986,
+      "brier": 0.06109358683888455,
+      "log_loss": 0.21422181662961612,
+      "threshold": 0.0557231466247843,
+      "precision": 0.19076492537313433,
+      "recall": 0.843298969072165,
+      "f1": 0.3111449220235831,
+      "sensitivity": 0.843298969072165,
+      "specificity": 0.6892351782195952,
+      "balanced_accuracy": 0.7662670736458801,
+      "alert_rate": 0.35332893869479237,
+      "false_alerts_per_100_rows": 28.592617007251153,
+      "confusion_matrix": {
+        "tn": 3848,
+        "fp": 1735,
+        "fn": 76,
+        "tp": 409
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.4798284798778277,
+        "median_auroc": 0.5060382326007326,
+        "participant_auroc_25th": 0.4048584667497005,
+        "participant_auroc_75th": 0.5806503195792229
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.7400787599549579,
+          0.8978800979474468
+        ],
+        "auprc": [
+          0.12269116032660975,
+          0.5433142073423115
+        ],
+        "brier": [
+          0.029323211386141506,
+          0.09894884430604957
+        ],
+        "log_loss": [
+          0.11939997277954967,
+          0.3298038430965547
+        ],
+        "within_person_auroc": [
+          0.3531238587002609,
+          0.5899542704428858
+        ]
+      },
+      "threshold_selection_source": "separate v2 threshold-selection participants"
+    },
+    "logistic_compact": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.8441836502933241,
+      "auprc": 0.3638304690524816,
+      "brier": 0.0620542776810317,
+      "log_loss": 0.21929734089099048,
+      "threshold": 0.062445178608077245,
+      "precision": 0.2903225806451613,
+      "recall": 0.7237113402061855,
+      "f1": 0.41440377804014167,
+      "sensitivity": 0.7237113402061855,
+      "specificity": 0.84631918323482,
+      "balanced_accuracy": 0.7850152617205028,
+      "alert_rate": 0.19924192485168096,
+      "false_alerts_per_100_rows": 14.139749505603165,
+      "confusion_matrix": {
+        "tn": 4725,
+        "fp": 858,
+        "fn": 134,
+        "tp": 351
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.572661625859978,
+        "median_auroc": 0.5433053217299793,
+        "participant_auroc_25th": 0.43266325125091365,
+        "participant_auroc_75th": 0.6915532923722978
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.7340623371243232,
+          0.8966183481669951
+        ],
+        "auprc": [
+          0.13166088634160855,
+          0.5131799343324407
+        ],
+        "brier": [
+          0.029104102006595547,
+          0.10119273944444118
+        ],
+        "log_loss": [
+          0.11899358622792022,
+          0.33748694968573845
+        ],
+        "within_person_auroc": [
+          0.45569998020063746,
+          0.6909670405993837
+        ]
+      },
+      "threshold_selection_source": "separate v2 threshold-selection participants"
+    },
+    "logistic_history_only": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.8451553039325936,
+      "auprc": 0.34811005324663197,
+      "brier": 0.061959927546195996,
+      "log_loss": 0.2186210927807328,
+      "threshold": 0.03740343989667705,
+      "precision": 0.21355759429153925,
+      "recall": 0.8639175257731959,
+      "f1": 0.34246015529219453,
+      "sensitivity": 0.8639175257731959,
+      "specificity": 0.723625291062153,
+      "balanced_accuracy": 0.7937714084176745,
+      "alert_rate": 0.32333553065260384,
+      "false_alerts_per_100_rows": 25.428477257745552,
+      "confusion_matrix": {
+        "tn": 4040,
+        "fp": 1543,
+        "fn": 66,
+        "tp": 419
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.4136348018347915,
+        "median_auroc": 0.4446581682359659,
+        "participant_auroc_25th": 0.25529584303356967,
+        "participant_auroc_75th": 0.5387449606199606
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.7479560143767788,
+          0.8926560362509487
+        ],
+        "auprc": [
+          0.1378725759403668,
+          0.45211971415088026
+        ],
+        "brier": [
+          0.028862037062379484,
+          0.10165319251776188
+        ],
+        "log_loss": [
+          0.12115015604095514,
+          0.33572256933800887
+        ],
+        "within_person_auroc": [
+          0.2890561122129509,
+          0.5242993905758425
+        ]
+      },
+      "threshold_selection_source": "separate v2 threshold-selection participants"
+    },
+    "random_forest_ema_only": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.809349996583886,
+      "auprc": 0.29193307941104457,
+      "brier": 0.06563194644273689,
+      "log_loss": 0.2342026097096924,
+      "threshold": 0.10316680575322904,
+      "precision": 0.24015748031496062,
+      "recall": 0.5030927835051546,
+      "f1": 0.3251165889407062,
+      "sensitivity": 0.5030927835051546,
+      "specificity": 0.861723087945549,
+      "balanced_accuracy": 0.6824079357253519,
+      "alert_rate": 0.16743572841133816,
+      "false_alerts_per_100_rows": 12.722478576137112,
+      "confusion_matrix": {
+        "tn": 4811,
+        "fp": 772,
+        "fn": 241,
+        "tp": 244
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.6216340795308194,
+        "median_auroc": 0.6360914226691184,
+        "participant_auroc_25th": 0.5419475222343373,
+        "participant_auroc_75th": 0.6777086683629862
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.7029094399684853,
+          0.885970195014233
+        ],
+        "auprc": [
+          0.08604603040225449,
+          0.4962931195882743
+        ],
+        "brier": [
+          0.03174501096599637,
+          0.10639723407052157
+        ],
+        "log_loss": [
+          0.12862790871472918,
+          0.3580354433198954
+        ],
+        "within_person_auroc": [
+          0.5302687558338524,
+          0.7047533099561823
+        ]
+      },
+      "threshold_selection_source": "separate v2 threshold-selection participants"
+    },
+    "personalized_ema_hybrid_rf": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.8710282134092634,
+      "auprc": 0.38771020542472334,
+      "brier": 0.059432281741991604,
+      "log_loss": 0.20330815127763094,
+      "threshold": 0.05311026867898937,
+      "precision": 0.21231847771657486,
+      "recall": 0.8742268041237113,
+      "f1": 0.3416599516518936,
+      "sensitivity": 0.8742268041237113,
+      "specificity": 0.7182518359305033,
+      "balanced_accuracy": 0.7962393200271074,
+      "alert_rate": 0.3291034937376401,
+      "false_alerts_per_100_rows": 25.922874093605802,
+      "confusion_matrix": {
+        "tn": 4010,
+        "fp": 1573,
+        "fn": 61,
+        "tp": 424
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.5241689837092803,
+        "median_auroc": 0.5201859125119879,
+        "participant_auroc_25th": 0.44630615460254447,
+        "participant_auroc_75th": 0.6614019660894661
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.7746121233315088,
+          0.923129628372583
+        ],
+        "auprc": [
+          0.14375793629971387,
+          0.5864322461011283
+        ],
+        "brier": [
+          0.02835885429279209,
+          0.09604850262496806
+        ],
+        "log_loss": [
+          0.11102630739850082,
+          0.3141259806669142
+        ],
+        "within_person_auroc": [
+          0.4063934723815282,
+          0.6247790176073864
+        ]
+      },
+      "threshold_selection_source": "separate v2 threshold-selection participants"
+    },
+    "history_rate_augmented_rf": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.843330545045619,
+      "auprc": 0.35750117583902635,
+      "brier": 0.060994100647478906,
+      "log_loss": 0.21527504791439087,
+      "threshold": 0.09568371130229367,
+      "precision": 0.2588480222068008,
+      "recall": 0.7690721649484537,
+      "f1": 0.387331256490135,
+      "sensitivity": 0.7690721649484537,
+      "specificity": 0.8087049973132724,
+      "balanced_accuracy": 0.788888581130863,
+      "alert_rate": 0.23747528015820699,
+      "false_alerts_per_100_rows": 17.600527356624916,
+      "confusion_matrix": {
+        "tn": 4515,
+        "fp": 1068,
+        "fn": 112,
+        "tp": 373
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.4949552171320635,
+        "median_auroc": 0.5424973393723393,
+        "participant_auroc_25th": 0.3540226007758475,
+        "participant_auroc_75th": 0.6152544597595713
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.7402980780476494,
+          0.8979131382730065
+        ],
+        "auprc": [
+          0.12817137598633524,
+          0.5531342596504988
+        ],
+        "brier": [
+          0.029528631177470583,
+          0.09872783729887914
+        ],
+        "log_loss": [
+          0.11886239426720625,
+          0.32986040258458266
+        ],
+        "within_person_auroc": [
+          0.38298007371929876,
+          0.5990943352538406
+        ]
+      },
+      "threshold_selection_source": "separate v2 threshold-selection participants"
+    },
+    "full_personalized_rf": {
+      "n": 6068,
+      "positives": 485,
+      "prevalence": 0.07992748846407383,
+      "auroc": 0.8638767170589658,
+      "auprc": 0.38905746396844393,
+      "brier": 0.05966465084219581,
+      "log_loss": 0.2070054877479634,
+      "threshold": 0.12249207853538487,
+      "precision": 0.2767102229054573,
+      "recall": 0.7422680412371134,
+      "f1": 0.40313549832026874,
+      "sensitivity": 0.7422680412371134,
+      "specificity": 0.831452624037256,
+      "balanced_accuracy": 0.7868603326371847,
+      "alert_rate": 0.21440342781806196,
+      "false_alerts_per_100_rows": 15.507580751483191,
+      "confusion_matrix": {
+        "tn": 4642,
+        "fp": 941,
+        "fn": 125,
+        "tp": 360
+      },
+      "within_person": {
+        "eligible_participants": 12,
+        "total_participants": 20,
+        "macro_auroc": 0.5021739530871586,
+        "median_auroc": 0.5705028146942646,
+        "participant_auroc_25th": 0.4307006575675407,
+        "participant_auroc_75th": 0.6316823899561461
+      },
+      "participant_bootstrap_95ci": {
+        "auroc": [
+          0.7609434604819721,
+          0.9156778147975675
+        ],
+        "auprc": [
+          0.14231110990942658,
+          0.6073203568518389
+        ],
+        "brier": [
+          0.0287847102089046,
+          0.09592572003255499
+        ],
+        "log_loss": [
+          0.11607406657438153,
+          0.3167052416660818
+        ],
+        "within_person_auroc": [
+          0.3609910419585809,
+          0.6231071111565821
+        ]
+      },
+      "threshold_selection_source": "separate v2 threshold-selection participants"
+    }
+  },
+  "paired_participant_bootstrap_delta_vs_v2": {
+    "pooled_rf_compact": {
+      "auroc": [
+        -0.008281960888896194,
+        0.011500515615771058
+      ],
+      "auprc": [
+        -0.010181777207885984,
+        0.01372092198357216
+      ],
+      "brier": [
+        -0.00034110430799594565,
+        0.0006436261957758291
+      ],
+      "log_loss": [
+        -0.003138711874957567,
+        0.0030208119873239192
+      ],
+      "within_person_auroc": [
+        -0.015245090792326051,
+        0.0036328224554558826
+      ]
+    },
+    "logistic_compact": {
+      "auroc": [
+        -0.04848931595654781,
+        0.03142246978998851
+      ],
+      "auprc": [
+        -0.04463647175285204,
+        0.06421896790380394
+      ],
+      "brier": [
+        -0.0006630954788020991,
+        0.003150085135098462
+      ],
+      "log_loss": [
+        -0.005213445136386568,
+        0.015057806722329982
+      ],
+      "within_person_auroc": [
+        0.014670403557143188,
+        0.16624655009831693
+      ]
+    },
+    "logistic_history_only": {
+      "auroc": [
+        -0.02623381689931601,
+        0.03662030778579012
+      ],
+      "auprc": [
+        -0.0950346198550744,
+        0.05622220036333641
+      ],
+      "brier": [
+        -0.0017365254311215873,
+        0.0042519160532524395
+      ],
+      "log_loss": [
+        -0.007978776162539156,
+        0.017677509571685353
+      ],
+      "within_person_auroc": [
+        -0.16575834700985714,
+        -0.0062482239788123565
+      ]
+    },
+    "random_forest_ema_only": {
+      "auroc": [
+        -0.08917455724801106,
+        0.02415880550203784
+      ],
+      "auprc": [
+        -0.12760779491587035,
+        0.03725034265439049
+      ],
+      "brier": [
+        0.0015885038190335302,
+        0.008312161590568485
+      ],
+      "log_loss": [
+        0.004358548454323091,
+        0.03831894537144898
+      ],
+      "within_person_auroc": [
+        0.019016182023245093,
+        0.24784465477531512
+      ]
+    },
+    "personalized_ema_hybrid_rf": {
+      "auroc": [
+        0.016185223495700736,
+        0.049571707624642795
+      ],
+      "auprc": [
+        0.007040066682644601,
+        0.06223406715208272
+      ],
+      "brier": [
+        -0.0032164269750801005,
+        -0.0003421083537815844
+      ],
+      "log_loss": [
+        -0.0189603675058047,
+        -0.004569430630091634
+      ],
+      "within_person_auroc": [
+        0.00029289939986410315,
+        0.08089369237210442
+      ]
+    },
+    "history_rate_augmented_rf": {
+      "auroc": [
+        -0.011930795075304717,
+        0.01565733095055359
+      ],
+      "auprc": [
+        -0.011797438753422105,
+        0.033864917348348206
+      ],
+      "brier": [
+        -0.0009891524348210668,
+        0.000959280839906242
+      ],
+      "log_loss": [
+        -0.0033959016937364105,
+        0.005869782964445339
+      ],
+      "within_person_auroc": [
+        -0.011615400555132388,
+        0.029554895273338516
+      ]
+    },
+    "full_personalized_rf": {
+      "auroc": [
+        0.007605216317570981,
+        0.03579987852784022
+      ],
+      "auprc": [
+        -0.001948268217594929,
+        0.07575061380177846
+      ],
+      "brier": [
+        -0.0033615848924464123,
+        0.00016150564401972136
+      ],
+      "log_loss": [
+        -0.015777326998035048,
+        -0.0006066901672826753
+      ],
+      "within_person_auroc": [
+        -0.020723673284782702,
+        0.05255994518183331
+      ]
+    }
+  },
+  "threshold_policy": {
+    "candidate_thresholds": {
+      "history_presence_prevalence": {
+        "absent": 0.06449700801625832,
+        "present": 0.47998220640569395
+      },
+      "pooled_rf_compact": {
+        "threshold": {
+          "threshold": 0.0557231466247843,
+          "youden_j": 0.6437017977497739,
+          "policy": "exploratory_youden_j",
+          "status": "operating point only; not a clinically justified decision rule"
+        },
+        "feature_count": 22
+      },
+      "logistic_compact": {
+        "threshold": {
+          "threshold": 0.062445178608077245,
+          "youden_j": 0.6416163539851696,
+          "policy": "exploratory_youden_j",
+          "status": "operating point only; not a clinically justified decision rule"
+        },
+        "feature_count": 22
+      },
+      "logistic_history_only": {
+        "threshold": {
+          "threshold": 0.03740343989667705,
+          "youden_j": 0.6333806069938004,
+          "policy": "exploratory_youden_j",
+          "status": "operating point only; not a clinically justified decision rule"
+        },
+        "feature_count": 10
+      },
+      "random_forest_ema_only": {
+        "threshold": {
+          "threshold": 0.10316680575322904,
+          "youden_j": 0.47945756851304067,
+          "policy": "exploratory_youden_j",
+          "status": "operating point only; not a clinically justified decision rule"
+        },
+        "feature_count": 252
+      },
+      "personalized_ema_hybrid_rf": {
+        "threshold": {
+          "threshold": 0.05311026867898937,
+          "youden_j": 0.6627929278603941,
+          "policy": "exploratory_youden_j",
+          "status": "operating point only; not a clinically justified decision rule"
+        },
+        "feature_count": 46
+      },
+      "history_rate_augmented_rf": {
+        "threshold": {
+          "threshold": 0.09568371130229367,
+          "youden_j": 0.6334427380904142,
+          "policy": "exploratory_youden_j",
+          "status": "operating point only; not a clinically justified decision rule"
+        },
+        "feature_count": 24
+      },
+      "full_personalized_rf": {
+        "threshold": {
+          "threshold": 0.12249207853538487,
+          "youden_j": 0.6493314153733944,
+          "policy": "exploratory_youden_j",
+          "status": "operating point only; not a clinically justified decision rule"
+        },
+        "feature_count": 48
+      }
+    },
+    "independent_of_locked_test": true,
+    "decision_threshold_is_not_recommended_for_use": true,
+    "reason": "Alert consequences and target semantics are unverified."
+  },
+  "within_person_diagnostics": {
+    "v2_eligible_participants": 12,
+    "v2_total_test_participants": 20,
+    "minimum_each_class": 3,
+    "prediction_variance": {
+      "participant_mean_probability_variance_share": 0.6266212443043827,
+      "spearman_participant_mean_probability_vs_prevalence": 0.9065380019946498,
+      "auroc_of_participant_mean_centered_scores": 0.5225698041366372,
+      "participant_mean_probability_range": [
+        0.008388586319972842,
+        0.262883620115145
+      ],
+      "participant_prevalence_range": [
+        0.0,
+        0.49537037037037035
+      ],
+      "interpretation": "Descriptive decomposition only. It cannot distinguish true personal risk from label/follow-up differences or establish forecasting."
+    },
+    "performance_by_prior_sample_count": {
+      "('0-5 prior rows', 'v2_random_forest')": {
+        "rows": 120,
+        "participants": 20,
+        "prevalence": 0.15,
+        "auroc": 0.6802832244008715,
+        "auprc": 0.38367431391012186,
+        "brier": 0.13656881380145477
+      },
+      "('0-5 prior rows', 'personalized_ema_hybrid_rf')": {
+        "rows": 120,
+        "participants": 20,
+        "prevalence": 0.15,
+        "auroc": 0.8491285403050108,
+        "auprc": 0.5182053148685936,
+        "brier": 0.11982736522507188
+      },
+      "('0-5 prior rows', 'full_personalized_rf')": {
+        "rows": 120,
+        "participants": 20,
+        "prevalence": 0.15,
+        "auroc": 0.8115468409586056,
+        "auprc": 0.44616182548889505,
+        "brier": 0.12031311552491163
+      },
+      "('6-23 prior rows', 'v2_random_forest')": {
+        "rows": 360,
+        "participants": 20,
+        "prevalence": 0.08333333333333333,
+        "auroc": 0.8241414141414143,
+        "auprc": 0.30492774730183386,
+        "brier": 0.06693056759717099
+      },
+      "('6-23 prior rows', 'personalized_ema_hybrid_rf')": {
+        "rows": 360,
+        "participants": 20,
+        "prevalence": 0.08333333333333333,
+        "auroc": 0.8419191919191918,
+        "auprc": 0.2932393796779327,
+        "brier": 0.06641465464193451
+      },
+      "('6-23 prior rows', 'full_personalized_rf')": {
+        "rows": 360,
+        "participants": 20,
+        "prevalence": 0.08333333333333333,
+        "auroc": 0.8274747474747474,
+        "auprc": 0.27315819132524505,
+        "brier": 0.0672228786529193
+      },
+      "('24+ prior rows', 'v2_random_forest')": {
+        "rows": 5588,
+        "participants": 20,
+        "prevalence": 0.07820329277022191,
+        "auroc": 0.8562221816474285,
+        "auprc": 0.3690600713443731,
+        "brier": 0.05898846313653812
+      },
+      "('24+ prior rows', 'personalized_ema_hybrid_rf')": {
+        "rows": 5588,
+        "participants": 20,
+        "prevalence": 0.07820329277022191,
+        "auroc": 0.874940192902047,
+        "auprc": 0.4018897198598679,
+        "brier": 0.05768549143026127
+      },
+      "('24+ prior rows', 'full_personalized_rf')": {
+        "rows": 5588,
+        "participants": 20,
+        "prevalence": 0.07820329277022191,
+        "auroc": 0.8686014179557677,
+        "auprc": 0.41021873017025073,
+        "brier": 0.05787532053192625
+      }
+    },
+    "prior_sample_count_note": "Counts prior stride-six rows, not a verified number of hours; feature timing is unresolved."
+  },
+  "historical_feature_diagnostics": {
+    "v2_random_forest_importance_by_family": {
+      "EMA": 0.10550360481690281,
+      "demographic": 0.11924929411337291,
+      "derived_personal_or_calendar": 0.006130762600484572,
+      "historical_count": 0.7691163384692395
+    },
+    "v2_top_features": [
+      {
+        "feature": "p168.l24.rratecount.count.lapse",
+        "importance": 0.1589271382116641
+      },
+      {
+        "feature": "p48.l24.rratecount.count.lapse",
+        "importance": 0.0978989575869336
+      },
+      {
+        "feature": "p72.l24.rratecount.count.lapse",
+        "importance": 0.08866872597050723
+      },
+      {
+        "feature": "p72.l24.dratecount.count.lapse",
+        "importance": 0.08617111549924432
+      },
+      {
+        "feature": "ema_10.p0.l24.rrecent_response",
+        "importance": 0.08278901639392232
+      },
+      {
+        "feature": "p24.l24.dratecount.count.lapse",
+        "importance": 0.07875193073538811
+      },
+      {
+        "feature": "p168.l24.dratecount.count.lapse",
+        "importance": 0.07582317943017704
+      },
+      {
+        "feature": "p12.l24.dratecount.count.lapse",
+        "importance": 0.07463213734335089
+      },
+      {
+        "feature": "p48.l24.dratecount.count.lapse",
+        "importance": 0.06426552525815604
+      },
+      {
+        "feature": "demo_income",
+        "importance": 0.04802247216207014
+      },
+      {
+        "feature": "p24.l24.rratecount.count.lapse",
+        "importance": 0.02794553113498506
+      },
+      {
+        "feature": "demo_age",
+        "importance": 0.016624439100282253
+      },
+      {
+        "feature": "p12.l24.rratecount.count.lapse",
+        "importance": 0.016032097298833127
+      },
+      {
+        "feature": "ema_2.p0.l24.rrecent_response",
+        "importance": 0.010758629576451467
+      },
+      {
+        "feature": "ema_6.p0.l24.rrecent_response",
+        "importance": 0.008279177487512463
+      }
+    ],
+    "hybrid_random_forest_importance_by_family": {
+      "EMA": 0.07640752224444326,
+      "demographic": 0.08341141432936615,
+      "derived_personal_or_calendar": 0.2153945431007674,
+      "historical_count": 0.624786520325423
+    },
+    "v2_historical_counter_importance_share": 0.7691163384692397,
+    "meaning_limit": "Impurity importance is associational and cannot establish causal influence or target leakage."
+  },
+  "personalization": {
+    "engineered_feature_families": {
+      "personal_ema_baseline": [
+        "v3_ema_2_prior24_mean",
+        "v3_ema_2_deviation_from_prior24",
+        "v3_ema_2_standardized_deviation",
+        "v3_ema_2_prior24_observed_count",
+        "v3_ema_6_prior24_mean",
+        "v3_ema_6_deviation_from_prior24",
+        "v3_ema_6_standardized_deviation",
+        "v3_ema_6_prior24_observed_count",
+        "v3_ema_7_prior24_mean",
+        "v3_ema_7_deviation_from_prior24",
+        "v3_ema_7_standardized_deviation",
+        "v3_ema_7_prior24_observed_count",
+        "v3_ema_10_prior24_mean",
+        "v3_ema_10_deviation_from_prior24",
+        "v3_ema_10_standardized_deviation",
+        "v3_ema_10_prior24_observed_count",
+        "v3_ema_2_prior24_missing_rate",
+        "v3_ema_2_current_missing",
+        "v3_ema_6_prior24_missing_rate",
+        "v3_ema_6_current_missing",
+        "v3_ema_7_prior24_missing_rate",
+        "v3_ema_7_current_missing",
+        "v3_ema_10_prior24_missing_rate",
+        "v3_ema_10_current_missing"
+      ],
+      "history_rate_contrast": [
+        "v3_nominal_lapse_rate_24_minus_168",
+        "v3_nominal_lapse_rate_ratio_24_to_168"
+      ],
+      "personalized_hybrid": [
+        "v3_ema_2_prior24_mean",
+        "v3_ema_2_deviation_from_prior24",
+        "v3_ema_2_standardized_deviation",
+        "v3_ema_2_prior24_observed_count",
+        "v3_ema_6_prior24_mean",
+        "v3_ema_6_deviation_from_prior24",
+        "v3_ema_6_standardized_deviation",
+        "v3_ema_6_prior24_observed_count",
+        "v3_ema_7_prior24_mean",
+        "v3_ema_7_deviation_from_prior24",
+        "v3_ema_7_standardized_deviation",
+        "v3_ema_7_prior24_observed_count",
+        "v3_ema_10_prior24_mean",
+        "v3_ema_10_deviation_from_prior24",
+        "v3_ema_10_standardized_deviation",
+        "v3_ema_10_prior24_observed_count",
+        "v3_ema_2_prior24_missing_rate",
+        "v3_ema_2_current_missing",
+        "v3_ema_6_prior24_missing_rate",
+        "v3_ema_6_current_missing",
+        "v3_ema_7_prior24_missing_rate",
+        "v3_ema_7_current_missing",
+        "v3_ema_10_prior24_missing_rate",
+        "v3_ema_10_current_missing",
+        "v3_nominal_lapse_rate_24_minus_168",
+        "v3_nominal_lapse_rate_ratio_24_to_168"
+      ]
+    },
+    "construction": "Per-person rolling summaries use only the preceding 24 sampled rows, exclude current row, and require at least six prior nonmissing readings for the mean/std.",
+    "individual_models": {
+      "locked_test_participants": 20,
+      "participants_with_training_labels_in_development": 0,
+      "eligible_for_separate_person_models_under_fixed_unseen_participant_split": 0,
+      "reason": "The grouped split holds each locked-test participant entirely out of training. Fitting an individual estimator from locked-test labels would change the fixed benchmark.",
+      "chronological_personalized_modeling": "not run; target interval and follow-up are unverified"
+    },
+    "identifier_policy": "participant IDs excluded from saved outputs; diagnostic CSV uses SHA-256 tokens"
+  },
+  "chronological_future_prediction": {
+    "status": "BLOCKED_PENDING_TARGET_AND_FEATURE_TIMING_VERIFICATION",
+    "why": "No verified prediction origin, outcome start/end interval, endpoint rule, or complete-follow-up field.",
+    "personal_baseline_features": "Past-row-only by computation order, but source measurement timestamps and target overlap remain unverified."
+  },
+  "selection_decision": {
+    "v3_model_artifact_created": false,
+    "reason": "Personalization must be demonstrated on a valid known-participant chronological evaluation; that evaluation is blocked. No locked-test winner is promoted.",
+    "fixed_benchmark_retained": "anchor_lapse_model_v2.joblib"
+  },
+  "reproducibility": {
+    "seed": 42,
+    "bootstrap_replicates": 1000,
+    "v3_random_forest_estimators": 40,
+    "python": "3.10.19",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "joblib": "1.5.3"
+  }
+}
